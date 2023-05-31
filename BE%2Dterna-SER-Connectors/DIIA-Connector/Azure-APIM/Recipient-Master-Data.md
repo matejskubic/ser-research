@@ -1,4 +1,4 @@
-## Target data entity: `data/LegalEntities`
+# Target data entity: `data/LegalEntities`
 
 #_API Methods_
 
@@ -8,8 +8,10 @@
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | LegalEntityId | Lowercase | 
-|  |  |
-|  |  |
+| Email | PrimaryContactEmail |
+| Name | Name |
+| URL | PrimaryContactURL|               |
+| VATNumber | VATNum | |
 
 
 
