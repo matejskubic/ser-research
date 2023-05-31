@@ -35,5 +35,11 @@ _The response comes in the following format:_
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 
-# getRecipientMasterData
+# **getRecipientMasterData**
+## Inbound data
+_The data is sent as a JSON object with the following mapping:_
+| Source | Destination | Comment |
+|--|--|--|
+| Id | LegalEntityId |
+
 
