@@ -29,7 +29,7 @@ _The response arrives in the following format:_
 # Target data entity: `data/MainAccountLegalEntities`
 
 # **getGLAccount**
-Returns open or active G/L account information.
+Returns the first open or active G/L account information.
 ## Inbound data
 _The data is sent as a JSON object with the following mapping:_
 | Source | Destination | Comment |
@@ -42,22 +42,5 @@ _The data is sent as a JSON object with the following mapping:_
 _The response as a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
-| LegalEntityId| Id| Lowercase |
-| Name | Name |
-| PrimaryContactEmail| Email |
-| PrimaryContactURL | URL |               |
-| VATNum | VATNumber | |
-| StartDateOfBusiness | Date| in the format "yyyy-MM-dd" |
-| AddressStreet | Street | New line in the source data is replaced by a space character |
-| AddressCity | City |
-| AddressZipCode | ZIP |
-| AddressCountryRegionISOCode | Country |
-| LegalEntityId | CompanyCode | Lowercase |
-| Name2 | null |
-| POBox | null |
-| POZIP | null |
-| TAXNumber | null |
-| VATNumbers | null |
-| Auxiliaries |  | JSON object consisting of: <br /> <ul><li>CompanyForm, consisting of:</li><ul><li>Form (empty JSON array)</li><li>Name (empty JSON array)</li></ul><li>MatchCodes, consisting of</li><ul><li>Negatives (empty JSON array)</li><li>Positives (empty JSON array)</li></ul><li>Vendors (empty JSON array)</li></ul>
-
-
+| MainAccountId| Id| |
+| MainAccountId | Description|
