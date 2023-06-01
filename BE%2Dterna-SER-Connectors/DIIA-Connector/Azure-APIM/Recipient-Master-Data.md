@@ -16,7 +16,7 @@ _The data is sent as a JSON object with the following mapping: _
 | URL | PrimaryContactURL|               |
 | VATNumber | VATNum |
 
-## Outbound data
+## Outbound data (searchRecipientMasterDataResponse)
 _The response arrives in the following format:_
 - SearchResult - JSON array with the following fields:
 
