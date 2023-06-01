@@ -10,9 +10,12 @@ Returns a list with basic information of the Recipients for the passed filtering
 _The data is sent as a JSON object with the following mapping: _
 | Source | Destination | Comment |
 |--|--|--|
+| Id |  |  |
+| Date |  | Date (ISO 8601 format - "YYYY-MM-DD") for determining valid vendors |
 | CompanyCode | LegalEntityId | Lowercase | 
 | Email | PrimaryContactEmail |
-| Name | Name |
+| IBAN |  | IBAN stored in the vendor's bank details |
+| Name | Name | Vendor name. Wildcard search permitted. |
 | URL | PrimaryContactURL|               |
 | VATNumber | VATNum |
 
