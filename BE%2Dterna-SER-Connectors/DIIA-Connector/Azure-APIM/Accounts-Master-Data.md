@@ -1,4 +1,4 @@
-# Target data entity: `data/LegalEntities`
+# Target data entity: `data/MainAccountCompanies`
 
 #_API Methods_
 
@@ -11,10 +11,8 @@ _The data is sent as a JSON object with the following mapping: _
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | LegalEntityId | Lowercase | 
-| Email | PrimaryContactEmail |
-| Name | Name |
-| URL | PrimaryContactURL|               |
-| VATNumber | VATNum |
+| Id | MainAccountId |
+| Description | Name |
 
 ## Outbound data (searchGLAccountsResponse)
 _The response arrives in the following format:_
@@ -22,17 +20,9 @@ _The response arrives in the following format:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| LegalEntityId| Id| Lowercase |
-| Name | Name |
-| PrimaryContactURL | URL |               |
-| VATNum | VATNumber | |
-| StartDateOfBusiness | Date| in the format "yyyy-MM-dd" |
-| AddressStreet | Street | New line in the source data is replaced by a space character |
-| AddressCity | City |
-| AddressZipCode | ZIP |
-| AddressCountryRegionISOCode | Country |
-| LegalEntityId | CompanyCode | Lowercase |
-
+| MainAccountId | Id |
+| LegalEntityId| CompanyCode | Lowercase |
+| Date | | If Date value is passed in the parameters, that value is shown; otherwise, the current date is shown |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 
