@@ -22,14 +22,9 @@ _The response arrives in the following format:_
 |--|--|--|
 | FixedAssetNumber | Id| |
 | dataAreaId | CompanyCode |
-| | Date |               |
-| VATNum | VATNumber | |
-| StartDateOfBusiness | Date| in the format "yyyy-MM-dd" |
-| AddressStreet | Street | New line in the source data is replaced by a space character |
-| AddressCity | City |
-| AddressZipCode | ZIP |
-| AddressCountryRegionISOCode | Country |
-| LegalEntityId | CompanyCode | Lowercase |
+| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the search criteria. | 
+| Name| Description | |
+| FixedAssetGroupId | Category | |
 
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
