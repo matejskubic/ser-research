@@ -3,10 +3,11 @@
 #_API Methods_
 
 ## **searchRecipientMasterData**
+Returns a list with basic information of the Recipients for the passed filtering criteria.
 
 ## Inbound data
 
-_The data is sent as a JSON object with the following mapping:_
+_The data is sent as a JSON object with the following mapping: _
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | LegalEntityId | Lowercase | 
@@ -16,7 +17,7 @@ _The data is sent as a JSON object with the following mapping:_
 | VATNumber | VATNum |
 
 ## Outbound data
-_The response comes in the following format:_
+_The response arrives in the following format:_
 - SearchResult - JSON array with the following fields:
 
 | Source | Destination | Comment |
@@ -36,6 +37,7 @@ _The response comes in the following format:_
 
 
 # **getRecipientMasterData**
+Returns detailed information about a single Recipient.
 ## Inbound data
 _The data is sent as a JSON object with the following mapping:_
 | Source | Destination | Comment |
