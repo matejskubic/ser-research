@@ -14,9 +14,10 @@ _The data is sent as a JSON object with the following mapping: _
 | Date |  | Date (ISO 8601 format - "YYYY-MM-DD") for determining valid vendors |
 | CompanyCode | LegalEntityId | Lowercase | 
 | Email | PrimaryContactEmail |
-| IBAN |  | IBAN stored in the vendor's bank details |
+| IBAN | IBAN | IBAN stored in the vendor's bank details |
 | Name | Name | Vendor name. Wildcard search permitted. |
-| URL | PrimaryContactURL|               |
+| OneTime |  | Restricts the search to one-time vendors or non-one-time vendors only. If this parameter is not specified, all vendors are taken into account in the search. |
+| URL |   |   |
 | VATNumber | VATNum |
 
 ## Outbound data (searchVendorMasterDataResponse)
