@@ -2,7 +2,7 @@
 
 #_API Methods_
 
-## **searchRecipientMasterData**
+## **searchVendorMasterData**
 Returns a list with basic information of the Recipients for the passed filtering criteria.
 
 ## Inbound data
@@ -16,7 +16,7 @@ _The data is sent as a JSON object with the following mapping: _
 | URL | PrimaryContactURL|               |
 | VATNumber | VATNum |
 
-## Outbound data
+## Outbound data (searchVendorMasterDataResponse)
 _The response arrives in the following format:_
 - SearchResult - JSON array with the following fields:
 
