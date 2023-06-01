@@ -3,7 +3,7 @@
 #_API Methods_
 
 ## **searchRecipientMasterData**
-Returns a list with basic information of the Recipients for the passed filtering criteria.
+Returns a list with basic information about the Invoice Recipients for the passed filtering criteria.
 
 ## Inbound data
 
@@ -37,7 +37,7 @@ _The response arrives in the following format:_
 
 
 # **getRecipientMasterData**
-Returns detailed information about a single Recipient.
+Returns detailed information about a single Invoice Recipient.
 ## Inbound data
 _The data is sent as a JSON object with the following mapping:_
 | Source | Destination | Comment |
