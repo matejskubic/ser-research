@@ -1,6 +1,6 @@
-# Target data entity: `data/MainAccountCompanies`
-
 #_API Methods_
+
+# Target data entity: `data/MainAccountCompanies`
 
 ## **searchGLAccounts**
 Returns a list with basic information about the GL accounts for the passed filtering criteria.
@@ -26,15 +26,19 @@ _The response arrives in the following format:_
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 
-# **getRecipientMasterData**
-Returns detailed information about a single Invoice Recipient.
+# Target data entity: `data/MainAccountLegalEntities`
+
+# **getGLAccount**
+Returns open or active G/L account information.
 ## Inbound data
 _The data is sent as a JSON object with the following mapping:_
 | Source | Destination | Comment |
 |--|--|--|
-| Id | LegalEntityId |
+| LegalEntityId | CompanyCode |
+| Id | MainAccountId |
+| Date | ActiveFrom - ActiveTo | If this parameter is specified, only the records whose ActiveFrom value is before or on the Date parameter value, and whose ActiveTo value is either empty or not before the Date parameter value will be shown |
 
-## Outbound data
+## Outbound data (getGLAccountResponse)
 _The response as a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
