@@ -40,7 +40,7 @@ _The response arrives in the following format:_
 
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-
+<!--
 # **getRecipientMasterData**
 Returns detailed information about a single Recipient.
 ## Inbound data
@@ -70,5 +70,5 @@ _The response as a single JSON object with the following format:_
 | TAXNumber | null |
 | VATNumbers | null |
 | Auxiliaries |  | JSON object consisting of: <br /> <ul><li>CompanyForm, consisting of:</li><ul><li>Form (empty JSON array)</li><li>Name (empty JSON array)</li></ul><li>MatchCodes, consisting of</li><ul><li>Negatives (empty JSON array)</li><li>Positives (empty JSON array)</li></ul><li>Vendors (empty JSON array)</li></ul>
-
+-->
 
