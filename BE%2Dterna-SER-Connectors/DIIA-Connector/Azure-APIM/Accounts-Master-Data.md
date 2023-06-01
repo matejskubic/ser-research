@@ -22,7 +22,7 @@ _The response arrives in the following format:_
 |--|--|--|
 | MainAccountId | Id |
 | LegalEntityId| CompanyCode | Lowercase |
-| | Date | If Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. But this Date parameter is not actually implemented in the search criteria. |
+| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the search criteria. |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 
