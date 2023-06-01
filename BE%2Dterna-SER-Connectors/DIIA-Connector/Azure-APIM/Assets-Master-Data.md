@@ -11,18 +11,18 @@ _The data is sent as a JSON object with the following mapping: _
 | Source | Destination | Comment |
 |--|--|--|
 | Id | FixedAssetNumber | 
-| Description | Description |
+| Description | Name |
 | Category | FixedAssetGroupId |
 
-## Outbound data (searchRecipientMasterDataResponse)
+## Outbound data (searchAssetsResponse)
 _The response arrives in the following format:_
 - SearchResult - JSON array with the following fields:
 
 | Source | Destination | Comment |
 |--|--|--|
-| LegalEntityId| Id| Lowercase |
-| Name | Name |
-| PrimaryContactURL | URL |               |
+| FixedAssetNumber | Id| |
+| dataAreaId | CompanyCode |
+| | Date |               |
 | VATNum | VATNumber | |
 | StartDateOfBusiness | Date| in the format "yyyy-MM-dd" |
 | AddressStreet | Street | New line in the source data is replaced by a space character |
