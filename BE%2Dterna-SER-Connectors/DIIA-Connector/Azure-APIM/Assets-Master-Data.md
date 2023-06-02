@@ -7,10 +7,16 @@ Returns all assets for the specified company code and the current date.
 
 ## Inbound data
 
-_The data is sent as a JSON object with the following mapping: _
+_A JSON/XML object with the following items: _
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
-| Id | FixedAssetNumber |
+| CompanyCode | dataAreaId | Mandatory parameter |
+| Id | FixedAssetNumber | Optional parameter |
+| Description | Name | Optional parameter |
+| Category| FixedAssetGroupId | Optional parameter |
 
 ## Outbound data (searchAssetsResponse)
 _The response arrives in the following format:_
@@ -26,12 +32,17 @@ _The response arrives in the following format:_
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 # **getAsset**
-Returns details about an asset number.
+Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
-_The data is sent as a JSON object with the following mapping:_
+_A JSON/XML object with the following items: _
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
-| Id | LegalEntityId |
+| CompanyCode | dataAreaId | Mandatory parameter |
+| Id | LegalEntityId | Optional parameter |
+| Description | Name | Optional parameter |
 
 ## Outbound data
 _The response as a single JSON object with the following format:_
