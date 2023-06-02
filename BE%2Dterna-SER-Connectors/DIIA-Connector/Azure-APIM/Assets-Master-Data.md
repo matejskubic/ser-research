@@ -44,7 +44,7 @@ _A JSON/XML object with the following items:_
 | Id | LegalEntityId | Optional parameter |
 | Description | Name | Optional parameter |
 
-## Outbound data
+## Outbound data (getAssetResponse)
 _The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
