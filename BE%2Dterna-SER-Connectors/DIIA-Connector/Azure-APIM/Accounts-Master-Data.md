@@ -7,12 +7,15 @@ Returns a list with basic information about the GL accounts for the passed filte
 
 ## Inbound data
 
-_The data is sent as a JSON object with the following mapping: _
+_A JSON/XML object with the following items: _
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
-| CompanyCode | LegalEntityId | Lowercase | 
-| Id | MainAccountId |
-| Description | Name |
+| CompanyCode | LegalEntityId | Mandatory parameter | 
+| Id | MainAccountId | Optional parameter |
+| Description | Name | Optional parameter |
 
 ## Outbound data (searchGLAccountsResponse)
 _The response arrives in the following format:_
