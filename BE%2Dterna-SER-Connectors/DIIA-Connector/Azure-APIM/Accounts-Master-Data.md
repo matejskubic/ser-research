@@ -7,7 +7,7 @@ Returns a list with basic information about the GL accounts for the passed filte
 
 ## Inbound data
 
-_A JSON/XML object with the following items: _
+_A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
 - data. The sub-object containing the data values with the mapping:
 
@@ -18,7 +18,7 @@ _A JSON/XML object with the following items: _
 | Description | Name | Optional parameter |
 
 ## Outbound data (searchGLAccountsResponse)
-_The response arrives in the following format:_
+_The response is in the following format:_
 - SearchResult - JSON array with the following fields:
 
 | Source | Destination | Comment |
@@ -34,11 +34,14 @@ _The response arrives in the following format:_
 # **getGLAccount**
 Returns the first open or active G/L account information.
 ## Inbound data
-_The data is sent as a JSON object with the following mapping:_
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
-| LegalEntityId | CompanyCode |
-| Id | MainAccountId |
+| CompanyCode | LegalEntityId | Mandatory parameter | 
+| Id | MainAccountId | Optional parameter |
 | Date | ActiveFrom - ActiveTo | If this parameter is specified, only the records whose ActiveFrom value is before or on the Date parameter value, and whose ActiveTo value is either empty or not before the Date parameter value will be shown |
 
 ## Outbound data (getGLAccountResponse)
