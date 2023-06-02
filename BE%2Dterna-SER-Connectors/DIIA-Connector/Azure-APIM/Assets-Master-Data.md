@@ -2,7 +2,7 @@
 
 #_API Methods_
 
-## **searchAssets**
+##`POST`**/searchAssets**
 Returns all assets for the specified company code and the current date.
 
 ## Inbound data
@@ -31,7 +31,7 @@ _The response is in the following format:_
 | FixedAssetGroupId | Category | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-# **getAsset**
+##`POST`**/getAsset**
 Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
 _A JSON/XML object with the following items:_
