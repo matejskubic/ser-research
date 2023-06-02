@@ -3,11 +3,13 @@
 #_API Methods_
 
 ## **searchVendorMasterData**
-Returns a list with basic information of the Recipients for the passed filtering criteria.
+Returns a list with basic information about the Recipients for the passed filtering criteria.
 
 ## Inbound data
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
 
-_The data is sent as a JSON object with the following mapping: _
 | Source | Destination | Comment |
 |--|--|--|
 | Id | VendorAccountNumber |  |
@@ -40,35 +42,36 @@ _The response arrives in the following format:_
 
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-<!--
-# **getRecipientMasterData**
-Returns detailed information about a single Recipient.
+# **getVendorMasterData**
+Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
-_The data is sent as a JSON object with the following mapping:_
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
-| Id | LegalEntityId |
+| CompanyCode | dataAreaId | Mandatory parameter |
+| Id | VendorAccountNumber | Mandatory parameter |
 
-## Outbound data
+## Outbound data (getVendorMasterDataResponse)
 _The response as a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
-| LegalEntityId| Id| Lowercase |
-| Name | Name |
-| PrimaryContactEmail| Email |
-| PrimaryContactURL | URL |               |
-| VATNum | VATNumber | |
-| StartDateOfBusiness | Date| in the format "yyyy-MM-dd" |
+| dataAreaId | CompanyCode | |
+| VendorAccountNumber | Id | |
+| VendorOrganizationName | Name | |
+| PrimaryContactEmail | Email | |
+| PrimaryContactURL | URL | |
+| StartDateOfBusiness | Date | in the format "yyyy-MM-dd" |
 | AddressStreet | Street | New line in the source data is replaced by a space character |
 | AddressCity | City |
 | AddressZipCode | ZIP |
 | AddressCountryRegionISOCode | Country |
-| LegalEntityId | CompanyCode | Lowercase |
 | Name2 | null |
 | POBox | null |
 | POZIP | null |
 | TAXNumber | null |
-| VATNumbers | null |
-| Auxiliaries |  | JSON object consisting of: <br /> <ul><li>CompanyForm, consisting of:</li><ul><li>Form (empty JSON array)</li><li>Name (empty JSON array)</li></ul><li>MatchCodes, consisting of</li><ul><li>Negatives (empty JSON array)</li><li>Positives (empty JSON array)</li></ul><li>Vendors (empty JSON array)</li></ul>
--->
-
+| VATNumbers | TaxExemptNumber | The output is a JSON array with just one element |
+| Auxiliaries |  | JSON object consisting of:<ul><li>AlwaysWithPurchaseOrder, with a fixed boolean value false</li><li>AlwaysWithoutPurchaseOrder, with a fixed boolean value false</li></ul> |
+| Bankdata | VendorBankAccounts | The output is a JSON array whose each element has the following fields:<ul><li></li><li></li><li></li><li></li></ul><table><tr><th>Source</th><th>Destination</th></tr><tr><td></td><td></td></tr></table>|
