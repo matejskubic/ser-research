@@ -42,7 +42,7 @@ _A JSON/XML object with the following items:_
 |--|--|--|
 | CompanyCode | LegalEntityId | Mandatory parameter | 
 | Id | MainAccountId | Optional parameter |
-| Date | ActiveFrom - ActiveTo | If this parameter is specified, only the records whose ActiveFrom value is before or on the Date parameter value, and whose ActiveTo value is either empty or not before the Date parameter value will be shown |
+| Date | ActiveFrom - ActiveTo | Optional parameter. If it is specified, only the records whose ActiveFrom value is before or on the _Date_ parameter value, and whose ActiveTo value is either empty or not before the _Date_ parameter value will be shown |
 
 ## Outbound data (getGLAccountResponse)
 _The response as a single JSON object with the following format:_
