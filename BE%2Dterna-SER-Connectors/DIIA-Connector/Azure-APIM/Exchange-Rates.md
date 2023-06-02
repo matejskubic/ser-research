@@ -22,9 +22,9 @@ _The response is in the following format:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
+| Rate | Rate | |
 | dataAreaId | CompanyCode |
-| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
+| _FromCurrencyCode_ or _ToCurrencyCode_ | Currency | The currency . | 
 | Name| Description | |
 | FixedAssetGroupId | Category | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
