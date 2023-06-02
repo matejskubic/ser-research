@@ -7,7 +7,7 @@ Returns all assets for the specified company code and the current date.
 
 ## Inbound data
 
-_A JSON/XML object with the following items: _
+_A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
 - data. The sub-object containing the data values with the mapping:
 
@@ -34,7 +34,7 @@ _The response arrives in the following format:_
 # **getAsset**
 Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
-_A JSON/XML object with the following items: _
+_A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
 - data. The sub-object containing the data values with the mapping:
 
