@@ -23,9 +23,6 @@ _The response is in the following format:_
 | Source | Destination | Comment |
 |--|--|--|
 | Rate | Rate | |
-| dataAreaId | CompanyCode |
-| _FromCurrencyCode_ or _ToCurrencyCode_ | Currency | The currency . | 
-| Name| Description | |
-| FixedAssetGroupId | Category | |
+| _FromCurrencyCode_ or _ToCurrencyCode_ | Currency | The currency it's conversion from or to Euro is shown. |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
