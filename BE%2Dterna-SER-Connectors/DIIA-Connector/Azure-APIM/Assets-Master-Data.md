@@ -19,7 +19,7 @@ _A JSON/XML object with the following items:_
 | Category| FixedAssetGroupId | Optional parameter |
 
 ## Outbound data (searchAssetsResponse)
-_The response arrives in the following format:_
+_The response is in the following format:_
 - SearchResult - JSON array with the following fields:
 
 | Source | Destination | Comment |
@@ -45,7 +45,7 @@ _A JSON/XML object with the following items:_
 | Description | Name | Optional parameter |
 
 ## Outbound data
-_The response as a single JSON object with the following format:_
+_The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
 | FixedAssetNumber | Id| |
