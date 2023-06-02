@@ -1,4 +1,6 @@
-# Target data entity: `data/checkAccounting`
+TBD
+<!--
+# Target data entity: 
 
 #_API Methods_
 
@@ -24,4 +26,4 @@ _The response arrives in the following format:_
 | Name| Description | |
 | FixedAssetGroupId | Category | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
-
+-->
