@@ -74,4 +74,4 @@ _The response as a single JSON object with the following format:_
 | TAXNumber | null |
 | VATNumbers | TaxExemptNumber | The output is a JSON array with just one element |
 | Auxiliaries |  | JSON object consisting of:<ul><li>AlwaysWithPurchaseOrder, with a fixed boolean value false</li><li>AlwaysWithoutPurchaseOrder, with a fixed boolean value false</li></ul> |
-| Bankdata | VendorBankAccounts | The output is a JSON array whose each element has the following fields:<table><tr><th>Source</th><th>Destination</th></tr><tr><td>bank.VendorBankAccountId</td><td>BankId</td></tr><tr><td>bank.BankName</td><td>BankName</td></tr><tr><td>bank.IBAN</td><td>IBAN</td></tr><tr><td></td><td>BIC (always empty string)</td></tr></table>|
+| Bankdata | VendorBankAccounts | The output is a JSON array whose each element has the following fields:<table><tr><th>Source</th><th>Destination</th></tr><tr><td>bank.VendorBankAccountId</td><td>BankId</td></tr><tr><td>bank.BankName</td><td>BankName</td></tr><tr><td>bank.IBAN</td><td>IBAN</td></tr><tr><td></td><td>BIC (empty string)</td></tr></table>|
