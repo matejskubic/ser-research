@@ -7,7 +7,10 @@ Returns a list with basic information about the Invoice Recipients for the passe
 
 ## Inbound data
 
-_The data is sent as a JSON object with the following mapping: _
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | LegalEntityId | Lowercase | 
@@ -17,7 +20,7 @@ _The data is sent as a JSON object with the following mapping: _
 | VATNumber | VATNum |
 
 ## Outbound data (searchRecipientMasterDataResponse)
-_The response arrives in the following format:_
+_The response is in the following format:_
 - SearchResult - JSON array with the following fields:
 
 | Source | Destination | Comment |
@@ -39,13 +42,16 @@ _The response arrives in the following format:_
 # **getRecipientMasterData**
 Returns detailed information about a single Invoice Recipient.
 ## Inbound data
-_The data is sent as a JSON object with the following mapping:_
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
+
 | Source | Destination | Comment |
 |--|--|--|
 | Id | LegalEntityId |
 
 ## Outbound data
-_The response as a single JSON object with the following format:_
+_The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
 | LegalEntityId| Id| Lowercase |
