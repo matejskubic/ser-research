@@ -27,7 +27,7 @@ _The response is a single JSON object with the following format:_
 
 
 ##`POST`**/getVendorPurchaseOrders**
-Returns details of the first asset that satisfies the filtering criteria.
+Returns open purchase orders of a specific vendor.
 
 ## Target data entity: `data/PurchaseOrderHeadersV2`
 
