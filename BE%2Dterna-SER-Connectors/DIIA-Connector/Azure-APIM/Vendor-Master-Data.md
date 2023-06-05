@@ -2,7 +2,7 @@
 
 #_API Methods_
 
-## **searchVendorMasterData**
+##`POST`**/searchVendorMasterData**
 Returns a list with basic information about the Recipients for the passed filtering criteria.
 
 ## Inbound data
@@ -42,7 +42,7 @@ _The response arrives in the following format:_
 
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-# **getVendorMasterData**
+##`POST`**/getVendorMasterData**
 Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
 _A JSON/XML object with the following items:_
