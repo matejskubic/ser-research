@@ -1,4 +1,4 @@
-# Target data entity: `data/FixedAssetsV2`
+# Target data entity: `data/Projects`
 
 #_API Methods_
 
