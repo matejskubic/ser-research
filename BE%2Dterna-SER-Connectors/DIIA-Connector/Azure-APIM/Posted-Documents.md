@@ -39,10 +39,9 @@ _A JSON/XML object with the following items:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| Id | <ul><li>dataAreaId</li><li>InvoiceAccount</li><li>InvoiceId</li><li>InvoiceDate</li></ul> | Mandatory parameter. This has to be a pipe-delimited string that converts to an array with the elements listed in the Destination column. All the elements of the array are used for filtering, with the logical AND between them. If the parameter value is not properly supplied, no data will be retrived. |
-| Description | Name | Optional parameter |
+| Id | <ul><li>dataAreaId</li><li>InvoiceAccount</li><li>InvoiceId</li><li>InvoiceDate</li></ul> | Mandatory parameter. This has to be a pipe-delimited string that converts to an array with the elements listed in the Destination column. All the elements of the array are used for filtering, with the logical AND between them. No data will be retrieved if the parameter value is not properly supplied. |
 
-## Outbound data (getAssetResponse)
+## Outbound data (getCaptureStateResponse)
 _The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
