@@ -29,3 +29,24 @@ _The response is in the following format:_
 | LedgerVoucher | Id | |
 | `PurchId` | OrderType | If PurchId field value is blank (null or empty string), the destination value will be "WOPO". If it is empty, the destination value is "WIPO". |
 - Truncated (true or false, depending on whether all the data is displayed or not)
+
+##`POST`**/getCaptureState**
+Returns the acquisition status of the invoice in the ERP system.
+## Inbound data
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- data. The sub-object containing the data values with the mapping:
+
+| Source | Destination | Comment |
+|--|--|--|
+| Id | <ul><li>dataAreaId</li><li>ProjectId</li><li>WBSId</li><li>Task</li></ul> | Mandatory parameter. This has to be a pipe-delimited string that converts to an array with the elements listed in the Destination column. All the elements of the array are used for filtering, with the logical AND between them. |
+| Description | Name | Optional parameter |
+
+## Outbound data (getAssetResponse)
+_The response is a single JSON object with the following format:_
+| Source | Destination | Comment |
+|--|--|--|
+| FixedAssetNumber | Id| |
+| Name| Description | |
+| FixedAssetGroupId | Category | |
+
