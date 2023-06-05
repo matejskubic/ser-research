@@ -45,7 +45,4 @@ _A JSON/XML object with the following items:_
 _The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
-| Name| Description | |
-| FixedAssetGroupId | Category | |
-
+| | State | If there's any vendInvoiceJours object in the response, the output value will be "POSTED". If not, and there's any vendorInvoiceHeaders object in the response, the output value will be "PARKED". Otherwise, the output value will be "UNKNOWN". |
