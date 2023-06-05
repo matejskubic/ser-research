@@ -1,4 +1,3 @@
-Vendor-Transactions
 Accounting
 Assets-Master-Data
 Cost-Centers-Master-Data
@@ -10,4 +9,5 @@ Payment-Methods
 Recipient-Master-Data
 Vendor-Invoice-Journal
 Vendor-Master-Data
+Vendor-Transactions
 WBS-Element-Structure
