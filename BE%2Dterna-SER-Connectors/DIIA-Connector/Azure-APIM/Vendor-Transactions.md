@@ -1,9 +1,9 @@
 #_API Methods_
 
-##`POST`**/getPaymentState**
+##`POST`**/getPurchaseOrderData**
 Returns the payment status of the invoice in the ERP system.
 
-## Target data entity: `data/PurchaseOrderHeadersV2`
+## Target data entity: `data/PurchaseOrderConfirmationHeaders`
 
 ## Inbound data
 
@@ -13,7 +13,9 @@ _A JSON/XML object with the following items:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| Id | <ul><li>dataAreaId</li><li>AccountNum</li><li>Invoice</li><li>TransDate</li></ul> | Mandatory parameter. This has to be a pipe-delimited string that converts to an array with the elements listed in the Destination column. All the elements of the array are used for filtering, with the logical AND between them. No data will be retrieved if the parameter value is not properly supplied. |
+| Id | | |
+| CompanyCode | dataAreaId | |
+| Date | | |
 
 
 ## Outbound data (getPaymentStateResponse)
