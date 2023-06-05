@@ -2,7 +2,7 @@
 
 #_API Methods_
 
-## **searchCostCenters**
+##`POST`**/searchCostCenters**
 Returns all open cost centers for the specified company code and the current date.
 
 ## Inbound data
@@ -28,7 +28,7 @@ _The response is in the following format:_
 | Name| Description | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-# **getCostCenter**
+##`POST`**/getCostCenter**
 Returns open cost centers.
 ## Inbound data
 _A JSON/XML object with the following items:_
