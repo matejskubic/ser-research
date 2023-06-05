@@ -2,7 +2,7 @@
 
 #_API Methods_
 
-## **getWBSElement**
+##`POST`**/getWBSElement**
 Checks whether the requested work breakdown structure element (WBS) exists and, if so, returns the corresponding details.
 
 ## Inbound data
