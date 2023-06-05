@@ -2,7 +2,7 @@
 
 # Target data entity: `data/MainAccountCompanies`
 
-## **searchGLAccounts**
+##`POST`**/searchGLAccounts**
 Returns a list with basic information about the GL accounts for the passed filtering criteria.
 
 ## Inbound data
@@ -31,7 +31,7 @@ _The response is in the following format:_
 
 # Target data entity: `data/MainAccountLegalEntities`
 
-# **getGLAccount**
+##`POST`**/getGLAccount**
 Returns the first open or active G/L account information.
 ## Inbound data
 _A JSON/XML object with the following items:_
