@@ -19,6 +19,8 @@ _A JSON/XML object with the following items:_
 
 
 ## Outbound data (getPaymentStateResponse)
+**TBD**
+<!--
 _The response is a single JSON object with the following format:_
 
 | Source | Destination | Comment |
@@ -26,7 +28,7 @@ _The response is a single JSON object with the following format:_
 | `Closed` | Status | If there's any record in the response where the column named <b>Closed</b> (this column contains the date data type) has a value other than F&O's null date (01/01/1900 12:00:00), the value in this output column will be "_PAID_". Otherwise, the value in this column will be "_OPEN_". |
 | `Closed` | Date | If the value in the previous field is "_PAID_", the value in this field will be the value from the <b>Closed</b> field from the given record. Otherwise, it will be the current date. Either way, this value is displayed in the format "yyyy-MM-dd". |
 
-
+-->
 
 ##`POST`**/getVendorPurchaseOrders**
 Returns open purchase orders of a specific vendor.
