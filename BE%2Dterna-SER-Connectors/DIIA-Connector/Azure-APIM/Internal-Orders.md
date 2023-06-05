@@ -30,7 +30,7 @@ _The response is in the following format:_
 | ProjectName | Description | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-##`post`**/getAsset**
+##`post`**/getInternalOrder**
 Returns details of the first asset that satisfies the filtering criteria.
 ## Inbound data
 _A JSON/XML object with the following items:_
@@ -40,14 +40,13 @@ _A JSON/XML object with the following items:_
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | dataAreaId | Mandatory parameter |
-| Id | LegalEntityId | Optional parameter |
-| Description | Name | Optional parameter |
+| Id | ProjectID | Mandatory parameter |
+| Date | ActualStartDate | Optional parameter |
 
-## Outbound data (getAssetResponse)
+## Outbound data (getInternalOrderResponse)
 _The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
-| Name| Description | |
-| FixedAssetGroupId | Category | |
+| ProjectID | Id| |
+| ProjectName | Description | |
 
