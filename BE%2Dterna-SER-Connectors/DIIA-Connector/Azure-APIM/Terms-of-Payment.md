@@ -20,6 +20,6 @@ _A JSON/XML object with the following items:_
 _The response is a single JSON object with the following format:_
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
+|  | Id| |
 | Name| Description | |
-| FixedAssetGroupId | Category | |
+|  |  | |
