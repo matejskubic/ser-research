@@ -16,7 +16,7 @@ _A JSON/XML object with the following items:_
 | CompanyCode | dataAreaId | VendorsV3<br />TaxGroupDatas<br />TaxCodeValuesV2 | Mandatory parameter |
 | VendorVATNumber | TaxExemptNumber | VendorsV3 | Optional parameter |
 | Date | FromDate / ToDate| TaxCodeValuesV2 | Optional parameter. If it's specified, only the records where this parameter value is between the values of FromDate and ToDate fields from the data entity. |
-| PositionData | | | Optional parameter. An object array whose elements have the following fields:<br /><table><tr><th>Source field</th><th>Comment</th></tr><tr><td>Id</td><td></td><tr><td>ArticleType</td><td></td><tr><td>MaterialNo</td><td></td><tr><td>TaxRate</td><td></td></tr></table> |
+| PositionData | | | Optional parameter. An object array whose elements have the following fields:<br /><table><tr><th>Source field</th><th>Comment</th></tr><tr><td>Id</td><td>Order number, not related to any data in the data entity</td><tr><td>ArticleType</td><td></td>Optional value, not used anywhere<tr><td>MaterialNo</td><td>Optional value, not used anywhere</td><tr><td>TaxRate</td><td>If the tax rate is known and specified in the request, it will be used to filter the tax codes.</td></tr></table> |
 
 ## Outbound data (searchAssetsResponse)
 _The response is in the following format:_
