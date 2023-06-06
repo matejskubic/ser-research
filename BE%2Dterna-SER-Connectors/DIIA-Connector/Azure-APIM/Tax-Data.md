@@ -18,18 +18,16 @@ _A JSON/XML object with the following items:_
 | Date | FromDate / ToDate| TaxCodeValuesV2 | Optional parameter. If it's specified, only the records where this parameter value is between the values of FromDate and ToDate fields from the data entity. |
 | PositionData | | | Optional parameter. An object array whose elements have the following fields:<br /><table><tr><th>Source field</th><th>Comment</th></tr><tr><td>Id</td><td>Order number, not related to any data in the data entity</td><tr><td>ArticleType</td><td></td>Optional value, not used anywhere<tr><td>MaterialNo</td><td>Optional value, not used anywhere</td><tr><td>TaxRate</td><td>If the tax rate is known and specified in the request, it will be used to filter the tax codes.</td></tr></table> |
 
-## Outbound data (searchAssetsResponse)
+## Outbound data (getTaxCodeResponse)
 _The response is in the following format:_
 - Result - JSON array with the following fields:
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| Id | Id | | |
-| dataAreaId | CompanyCode |
-| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
-| Name| Description | |
-| FixedAssetGroupId | Category | |
-- Truncated (true or false, depending on whether all the data is displayed or not)
+| | Id | | Equal to the ID specified in the query |
+| TaxCodeId | Code | TaxCodeValuesV2 | 
+| | PossibleCode | TaxCodeValuesV2 | A string array. If no tax code could be determined unambiguously, the most plausible tax code will be passed in the 'Code' parameter, and other possible tax codes will be listed in 'PossibleCode' |
+|  | Rate | Tax code rate. Expected format: 0.03 for 3%; 1.00 for 100%. Equal to the TaxRate value specified in the query |
 
 <!--
 ##`POST`**/getAsset**
