@@ -16,7 +16,7 @@ _A JSON/XML object with the following items:_
 | CompanyCode | dataAreaId | VendorsV3<br />TaxGroupDatas<br />TaxCodeValuesV2 | Mandatory parameter |
 | VendorVATNumber | TaxExemptNumber | VendorsV3 | Optional parameter |
 | Date | FromDate / ToDate| TaxCodeValuesV2 | Optional parameter. If it's specified, only the records where this parameter value is between the values of FromDate and ToDate fields from the data entity. |
-| PositionData | | An object array whose elements have the following fields:<br /><table style="width:100%"><tr><th>Source</th><th>Destination</th></tr><tr><td>Id</td><td></td><tr><td>ArticleType</td><td></td><tr><td>MaterialNo</td><td></td><tr><td>TaxRate</td><td></td></tr></table> | Optional parameter |
+| PositionData | | | Optional parameter. An object array whose elements have the following fields:<br /><table><tr><th>Source field</th><th>Comment</th></tr><tr><td>Id</td><td></td><tr><td>ArticleType</td><td></td><tr><td>MaterialNo</td><td></td><tr><td>TaxRate</td><td></td></tr></table> |
 
 ## Outbound data (searchAssetsResponse)
 _The response is in the following format:_
@@ -24,7 +24,7 @@ _The response is in the following format:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| Id | Id |  |
+| Id | Id | | |
 | dataAreaId | CompanyCode |
 | | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
 | Name| Description | |
