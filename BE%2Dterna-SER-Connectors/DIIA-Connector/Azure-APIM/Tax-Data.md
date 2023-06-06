@@ -1,9 +1,9 @@
-# Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
-
 #_API Methods_
 
 ##`POST`**/getTaxCode**
 Returns all assets for the specified company code and the current date.
+
+# Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
 
 ## Inbound data
 
@@ -29,25 +29,27 @@ _The response is in the following format:_
 | | PossibleCode | TaxCodeValuesV2 | A string array. If no tax code could be determined unambiguously, the most plausible tax code will be passed in the 'Code' parameter, and other possible tax codes will be listed in 'PossibleCode' |
 |  | Rate | Tax code rate. Expected format: 0.03 for 3%; 1.00 for 100%. Equal to the TaxRate value specified in the query |
 
-<!--
-##`POST`**/getAsset**
-Returns details of the first asset that satisfies the filtering criteria.
+
+##`POST`**/getTaxRates**
+Determination of tax rates for automatic extraction.
+
+# Target data entity: `data/TaxCodeValuesV2`
+
 ## Inbound data
 _A JSON/XML object with the following items:_
-- maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
+- maxHits. Optional parameter that indicates the number of records that need to be returned.
 - data. The sub-object containing the data values with the mapping:
 
 | Source | Destination | Comment |
 |--|--|--|
 | CompanyCode | dataAreaId | Mandatory parameter |
-| Id | LegalEntityId | Optional parameter |
-| Description | Name | Optional parameter |
+| Date | FromDate / ToDate | Optional parameter. If it's specified, only the records where this parameter value is between the values of FromDate and ToDate fields from the data entity. |
+| Code | TaxCodeId | Optional parameter. If the tax code is known, it can be used to filter the tax rates. |
 
-## Outbound data (getAssetResponse)
-_The response is a single JSON object with the following format:_
+## Outbound data (getTaxRatesResponse)
+_The response is in the following format:_
+- Rates - JSON array containing tax rates for a specified country. Expected format: 0.03 for 3%; 1.00 for 100%. Each element has the following structure:
+
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
-| Name| Description | |
-| FixedAssetGroupId | Category | |
--->
+| Value | | |
