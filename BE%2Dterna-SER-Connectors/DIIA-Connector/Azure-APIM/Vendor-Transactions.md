@@ -64,3 +64,13 @@ As mentioned above, the InformativePositions element of the output object is an 
 | | Id | | Terms of payment key. <div style="color: red">Not implemented. </div> |
 | | BaseLineDate | | Baseline date in terms of payment (in ISO 8601 format) |
 | | PaymentMethod | | |
+
+(***) <b>Variances object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | ExpectedPrice | | The outstanding balance for the line item |
+| | ExpectedQuantity | | The remaining quantity for the line item |
+| | PriceDownward | | The lower price limit for the line item |
+| | PriceUpward | | The upper price limit for the line item |
+| | QuantityDownward | | The lower quantity limit for the line item |
+| | QuantityUpward | | | The upper quantity limit for the line item |
