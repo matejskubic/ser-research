@@ -1,9 +1,9 @@
 #_API Methods_
 
 ##`POST`**/getPurchaseOrderData**
-Returns the payment status of the invoice in the ERP system.
+Returns information about the purchase order with the specified order number.
 
-## Target data entity: `data/PurchaseOrderConfirmationHeaders`
+## Target data entities: `data/PurchaseOrderConfirmationHeaders`, `data/ProductReceiptHeaders`
 
 ## Inbound data
 
@@ -11,14 +11,15 @@ _A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
 - data. The sub-object containing the data values with the mapping:
 
-| Source | Destination | Comment |
-|--|--|--|
-| Id | | |
-| CompanyCode | dataAreaId | |
-| Date | | |
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| Id | PurchaseOrderNumber | ProductReceiptHeaders | |
+| CompanyCode | dataAreaId | ProductReceiptHeaders, PurchaseOrderConfirmationHeaders | |
+| Type | PurchaseOrderStatus | PurchaseOrderConfirmationHeaders | Certain item types are to be determined via the type. Possible values are: NONE, OPEN, POSTED and RETURNED |
+| Date | | | Corresponds to the posting date (ISO 8601 format) if the line items are to be determined retrospectively. <div style="color:red">Not implemented.</div>|
 
 
-## Outbound data (getPaymentStateResponse)
+## Outbound data (getPurchaseOrderDataResponse)
 **TBD**
 <!--
 _The response is a single JSON object with the following format:_
