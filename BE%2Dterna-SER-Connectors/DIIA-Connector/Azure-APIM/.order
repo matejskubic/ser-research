@@ -1,4 +1,3 @@
-Perform-Post
 Accounting
 Assets-Master-Data
 Cost-Centers-Master-Data
@@ -7,6 +6,7 @@ External-Item-Numbers
 GL-Accounts-Master-Data
 Internal-Orders
 Payment-Methods
+Perform-Post
 Purchase-Order-Data
 Recipient-Master-Data
 Tax-Data
