@@ -3,7 +3,7 @@
 ##`POST`**/getPurchaseOrderData**
 Returns information about the purchase order with the specified order number.
 
-## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders`, `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/TaxCodeValuesV2`
+## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders with ProductReceiptLines`, `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/TaxCodeValuesV2`
 
 ## Inbound data
 
@@ -49,11 +49,11 @@ As mentioned above, the InformativePositions element of the output object is an 
 | ExternalItemNumber | ArticleNoVendor | PurchaseOrderConfirmationLines | Vendor's article number |
 | | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. <div style="color: red">Not implemented. </div> |
 | | TaxCode | TaxGroupDatas | The tax code of purchase order line item |
-| | TaxRate | TaxGroupDatas | The tax rate of purchase order line item. Expected format: 0.03 for 3%; 1.00 for 100% |
+| | TaxRate | TaxCodeValuesV2 | The tax rate of purchase order line item. Expected format: 0.03 for 3%; 1.00 for 100% |
 | | AlternativePackagings | | List of alternative package sizes (min. 1 object). <div style="color: red">Not implemented. </div> |
-| | GRDate | | Corresponds to the goods receipt date (ISO 8601 format), as it is stored in the ERP system. |
-| | GRDeliveryNoteNumber | | The delivery number from the delivery note. |
-| | GRId | | The goods receipt number that corresponds to the ID in the ERP system. |
+| ProductReceiptDate | GRDate | ProductReceiptHeaders | Corresponds to the goods receipt date (ISO 8601 format), as it is stored in the ERP system. |
+| ProductReceiptNumber | GRDeliveryNoteNumber | ProductReceiptLines | The list of delivery numbers from the delivery note. |
+| RecordId | GRId | ProductReceiptLines | The goods receipt number that corresponds to the ID in the ERP system. |
 | | GRPosition | | The line item ID from the goods receipt. <div style="color: red">Not implemented.</div> |
 
 (**) <b>TermsOfPayment object structure</b>
