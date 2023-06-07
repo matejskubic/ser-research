@@ -3,7 +3,7 @@
 ##`POST`**/getPurchaseOrderData**
 Returns information about the purchase order with the specified order number.
 
-## Target data entities: `data/PurchaseOrderConfirmationHeaders`, `data/ProductReceiptHeaders`
+## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders`
 
 ## Inbound data
 
@@ -68,8 +68,8 @@ As mentioned above, the InformativePositions element of the output object is an 
 (***) <b>Variances object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | ExpectedPrice | | The outstanding balance for the line item |
-| | ExpectedQuantity | | The remaining quantity for the line item |
+| PurchasePrice | ExpectedPrice | | The outstanding balance for the line item |
+| OrderedPurchaseQuantity | ExpectedQuantity | PurchaseOrderConfirmationLines | The remaining quantity for the line item |
 | | PriceDownward | | The lower price limit for the line item. (****) |
 | | PriceUpward | | The upper price limit for the line item. (****) |
 | | QuantityDownward | | The lower quantity limit for the line item. (****) |
@@ -78,5 +78,5 @@ As mentioned above, the InformativePositions element of the output object is an 
  (****) All the Downward/Upward values from the Variances object are JSON objects with the following fields:
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Type | | Type of the variance. Possible values: NONE, RELATIVE, ABSOLUTE, UNLIMITED. |
+| | Type | | Type of the variance. Possible values: NONE, RELATIVE, ABSOLUTE, UNLIMITED. For the Downward items, the output value is always "UNLIMITED", and for the Uprard values, it is always "NONE". |
 | | Value | | The value of the variance for type 'RELATIVE' or 'ABSOLUTE'. The value of the variance that is still possible is returned for type 'ABSOLUTE'. The expected format for type 'RELATIVE': 0.03 for 3%; 1.00 for 100%. <div style="color: red">Not implemented. </div> |
