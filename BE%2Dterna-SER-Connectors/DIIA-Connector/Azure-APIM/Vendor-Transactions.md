@@ -36,3 +36,27 @@ _The response is a single JSON object with the following format:_
 As mentioned above, the InformativePositions element of the output object is an array of object with the following structure:
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
+| | Id | | Purchase order line item ID |
+| | ArticleType | | Possible values: GOOD, SERVICE, IC |
+| | Currency | | Line item currency |
+| | Description | | The description of the goods, services or incidental costs |
+| | GRType | | Defines what type of item it is in relation to the goods receipt. The following values ​​are supported and affect the GR parameters: NONE, GREXPECTED, GRBIV.|
+| | NetUnit | | The net unit price of the purchase order line item |
+| | Quantity | | The quantity of purchase order line item |
+| | Unit | | The unit of purchase order line item |
+| | Variances | | JSON object containing the tolerable quantity and price variance for a line item. The object's structure is shown in the table below. (***) |
+| | ArticleNoCustomer | | Customer's article number |
+| | ArticleNoVendor | | Vendor's article number |
+| | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. |
+| | TaxCode | | The tax code of purchase order line item |
+| | TaxRate | | The tax rate of purchase order line item. Expected format: 0.03 for 3%; 1.00 for 100% |
+| | AlternativePackagings | | List of alternative package sizes (min. 1 object). <div style="color: red">Not implemented. </div> |
+| | GRDate | | Corresponds to the goods receipt date (ISO 8601 format), as it is stored in the ERP system. |
+| | GRDeliveryNoteNumber | | The delivery number from the delivery note. |
+| | GRId | | The goods receipt number that corresponds to the ID in the ERP system. |
+| | GRPosition | | The line item ID from the goods receipt. <div style="color: red">Not implemented.</div> |
+
+(**) <b>TermsOfPayment object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | Discounts| | |
