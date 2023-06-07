@@ -41,8 +41,8 @@ As mentioned above, the InformativePositions element of the output object is an 
 | CurrencyCode | Currency | PurchaseOrderConfirmationHeaders | Line item currency. |
 | LineDescription | Description | PurchaseOrderConfirmationLines | The description of the goods, services, or incidental costs. |
 | | GRType | PurchaseOrderConfirmationLines | Defines what type of item it is in relation to the goods receipt. The following values ​​are supported and affect the GR parameters: NONE, GREXPECTED, GRBIV. Multiple factors affect this output value. |
-| | NetUnit | | The net unit price of the purchase order line item |
-| | Quantity | | The quantity of purchase order line item |
+| PurchasePrice | NetUnit | PurchaseOrderConfirmationLines | The net unit price of the purchase order line item |
+| OrderedPurchaseQuantity - ReceivedPurchaseQuantity | Quantity | PurchaseOrderConfirmationLines | Difference between ordered and received order line quantity. |
 | | Unit | | The unit of purchase order line item |
 | | Variances | | JSON object containing the tolerable quantity and price variance for a line item. The object's structure is shown in the table below. (***) |
 | | ArticleNoCustomer | | Customer's article number |
