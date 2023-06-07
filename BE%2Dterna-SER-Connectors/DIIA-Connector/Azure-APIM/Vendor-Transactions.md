@@ -60,10 +60,10 @@ As mentioned above, the InformativePositions element of the output object is an 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | | Discounts | | JSON array containing discount details, sorted ascending by 'Days'. <div style="color: red">Not implemented. </div> |
-| | DueDays | | Number of days until payment is due |
+| FixedDueDate - AccountingDate | DueDays | PurchaseOrderConfirmationHeaders | Number of days until payment is due.  |
 | | Id | | Terms of payment key. <div style="color: red">Not implemented. </div> |
-| | BaseLineDate | | Baseline date in terms of payment (in ISO 8601 format) |
-| | PaymentMethod | | |
+| AccountingDate | BaseLineDate | PurchaseOrderConfirmationHeaders | Baseline date in terms of payment (in ISO 8601 format) |
+| VendorPaymentMethodName | PaymentMethod | PurchaseOrderConfirmationHeaders | |
 
 (***) <b>Variances object structure</b>
 | Source | Destination | Data entity | Comment |
