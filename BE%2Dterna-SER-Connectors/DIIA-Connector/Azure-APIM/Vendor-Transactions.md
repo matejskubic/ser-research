@@ -3,7 +3,7 @@
 ##`POST`**/getPurchaseOrderData**
 Returns information about the purchase order with the specified order number.
 
-## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders`
+## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders`, `data/TaxGroupDatas`
 
 ## Inbound data
 
