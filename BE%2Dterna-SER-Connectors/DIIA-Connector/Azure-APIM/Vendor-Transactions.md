@@ -31,3 +31,8 @@ _The response is a single JSON object with the following format:_
 | | InformativePositions | | An array of line item data (min. 0 objects). The data is intended for informational purposes only; it cannot be used for posting. The list of elements of each item in this array is shown in the table below. (*) |
 | OrderVendorAccountNumber | VendorId | PurchaseOrderConfirmationHeaders | |
 | | TermsOfPayment | | JSON object whose structure is shown in the table below. (**) |
+
+(*) <b>InformativePositions item structure</b>
+As mentioned above, the InformativePositions element of the output object is an array of object with the following structure:
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
