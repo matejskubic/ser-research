@@ -19,6 +19,7 @@ _A JSON/XML object with the following items:_
 (*) <b>Data object structure</b>
 | Source | Destination | Comment |
 |--|--|--|
+| | | |
 
 ## Outbound data (performPostResponse)
 _The response is in the following format:_
