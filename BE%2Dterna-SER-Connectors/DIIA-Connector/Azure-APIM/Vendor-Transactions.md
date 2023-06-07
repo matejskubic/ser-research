@@ -43,11 +43,11 @@ As mentioned above, the InformativePositions element of the output object is an 
 | | GRType | PurchaseOrderConfirmationLines | Defines what type of item it is in relation to the goods receipt. The following values ​​are supported and affect the GR parameters: NONE, GREXPECTED, GRBIV. Multiple factors affect this output value. |
 | PurchasePrice | NetUnit | PurchaseOrderConfirmationLines | The net unit price of the purchase order line item |
 | OrderedPurchaseQuantity - ReceivedPurchaseQuantity | Quantity | PurchaseOrderConfirmationLines | Difference between ordered and received order line quantity. |
-| | Unit | | The unit of purchase order line item |
+| PurchaseUnitSymbol | Unit | PurchaseOrderConfirmationLines | The unit of purchase order line item |
 | | Variances | | JSON object containing the tolerable quantity and price variance for a line item. The object's structure is shown in the table below. (***) |
-| | ArticleNoCustomer | | Customer's article number |
-| | ArticleNoVendor | | Vendor's article number |
-| | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. |
+| ItemNumber or ProcurementProductCategoryName| ArticleNoCustomer | PurchaseOrderConfirmationLines| Customer's article number |
+| ExternalItemNumber | ArticleNoVendor | PurchaseOrderConfirmationLines | Vendor's article number |
+| | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. <div style="color: red">Not implemented. </div> |
 | | TaxCode | | The tax code of purchase order line item |
 | | TaxRate | | The tax rate of purchase order line item. Expected format: 0.03 for 3%; 1.00 for 100% |
 | | AlternativePackagings | | List of alternative package sizes (min. 1 object). <div style="color: red">Not implemented. </div> |
