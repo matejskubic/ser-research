@@ -59,4 +59,8 @@ As mentioned above, the InformativePositions element of the output object is an 
 (**) <b>TermsOfPayment object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Discounts| | |
+| | Discounts | | JSON array containing discount details, sorted ascending by 'Days'. <div style="color: red">Not implemented. </div> |
+| | DueDays | | Number of days until payment is due |
+| | Id | | Terms of payment key. <div style="color: red">Not implemented. </div> |
+| | BaseLineDate | | Baseline date in terms of payment (in ISO 8601 format) |
+| | PaymentMethod | | |
