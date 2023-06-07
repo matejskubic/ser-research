@@ -70,7 +70,13 @@ As mentioned above, the InformativePositions element of the output object is an 
 |--|--|--|--|
 | | ExpectedPrice | | The outstanding balance for the line item |
 | | ExpectedQuantity | | The remaining quantity for the line item |
-| | PriceDownward | | The lower price limit for the line item |
-| | PriceUpward | | The upper price limit for the line item |
-| | QuantityDownward | | The lower quantity limit for the line item |
-| | QuantityUpward | | | The upper quantity limit for the line item |
+| | PriceDownward | | The lower price limit for the line item. (****) |
+| | PriceUpward | | The upper price limit for the line item. (****) |
+| | QuantityDownward | | The lower quantity limit for the line item. (****) |
+| | QuantityUpward | | | The upper quantity limit for the line item. (****) |
+
+ (****) All the Downward/Upward values from the Variances object are JSON objects with the following fields:
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | Type | | Type of the variance. Possible values: NONE, RELATIVE, ABSOLUTE, UNLIMITED. |
+| | Value | | The value of the variance for type 'RELATIVE' or 'ABSOLUTE'. The value of the variance that is still possible is returned for type 'ABSOLUTE'. The expected format for type 'RELATIVE': 0.03 for 3%; 1.00 for 100%. <div style="color: red">Not implemented. </div> |
