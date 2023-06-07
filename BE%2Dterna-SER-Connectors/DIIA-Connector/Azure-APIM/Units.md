@@ -3,7 +3,7 @@
 #_API Methods_
 
 ##`POST`**/getUnits**
-Returns all assets for the specified company code and the current date.
+Evaluates the locale of the session and returns the corresponding units supported by the ERP system and their descriptions.
 
 ## Inbound data
 
