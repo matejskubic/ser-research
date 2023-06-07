@@ -1,4 +1,3 @@
-Tax-Data
 Accounting
 Assets-Master-Data
 Cost-Centers-Master-Data
@@ -8,6 +7,7 @@ GL-Accounts-Master-Data
 Internal-Orders
 Payment-Methods
 Recipient-Master-Data
+Tax-Data
 Terms-of-Payment
 Units
 Vendor-Invoice-Journal
