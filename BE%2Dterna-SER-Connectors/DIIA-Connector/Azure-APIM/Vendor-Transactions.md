@@ -25,7 +25,9 @@ _The response is a single JSON object with the following format:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| Id | PurchaseOrderNumber | ProductReceiptHeaders | Purchase order number, as stored in the ERP system |
-| DocumentType | | | Type of the purchase order. Always has a value "STANDARD". |
-| GRExpected | `PurchaseOrderStatus` | PurchaseOrderConfirmationHeaders | Boolean value showing whether the line item is still awaiting delivery of goods. If PurchaseOrderStatus value from the data entity has the value "Received", or if the "Type" parameter from the request has the value "NONE", the output value in this field will be False. Otherwise, it will be Trus. |
-| | | | |
+| PurchaseOrderNumber | Id | ProductReceiptHeaders | Purchase order number, as stored in the ERP system |
+| | DocumentType | | Type of the purchase order. Always has a value "STANDARD". |
+| `PurchaseOrderStatus` | GRExpected | PurchaseOrderConfirmationHeaders | Boolean value showing whether the line item is still awaiting delivery of goods. If PurchaseOrderStatus value from the data entity has the value "Received", or if the "Type" parameter from the request has the value "NONE", the output value in this field will be False. Otherwise, it will be Trus. |
+| | InformativePositions | | An array of line item data (min. 0 objects). The data is intended for informational purposes only; it cannot be used for posting. The list of elements of each item in this array is shown in the table below. |
+| OrderVendorAccountNumber | VendorId | PurchaseOrderConfirmationHeaders | |
+| | TermsOfPayment | | |
