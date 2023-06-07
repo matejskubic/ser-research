@@ -9,12 +9,12 @@ _A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
 - data. The sub-object containing the data values with the mapping:
 
-| Source | Destination | Comment |
-|--|--|--|
-| CompanyCode | dataAreaId | Mandatory parameter |
-| Id | | Optional parameter. Terms of payment key. Must not be set if 'VendorId' is set. |
-| Date | | Optional parameter |
-| VendorId | VendorAccountNumber | Optional parameter. Terms of payment key. Must not be set if 'Id' is set. |
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| CompanyCode | dataAreaId | VendorsV3, PaymentTerms | Mandatory parameter |
+| Id | Name | PaymentTerms | Optional parameter. Terms of payment key. Must not be set if 'VendorId' is set. |
+| Date | | | <div style="color:red">Not implemented</div> |
+| VendorId | VendorAccountNumber | VendorsV3 | Optional parameter. Terms of payment key. Must not be set if 'Id' is set. |
 
 ## Outbound data (getTermsOfPaymentResponse)
 _The response is a single JSON object with the following format:_
