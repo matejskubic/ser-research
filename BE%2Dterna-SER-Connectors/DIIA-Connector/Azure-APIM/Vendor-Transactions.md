@@ -28,3 +28,4 @@ _The response is a single JSON object with the following format:_
 | Id | PurchaseOrderNumber | ProductReceiptHeaders | Purchase order number, as stored in the ERP system |
 | DocumentType | | | Type of the purchase order. Always has a value "STANDARD". |
 | GRExpected | `PurchaseOrderStatus` | PurchaseOrderConfirmationHeaders | Boolean value showing whether the line item is still awaiting delivery of goods. If PurchaseOrderStatus value from the data entity has the value "Received", or if the "Type" parameter from the request has the value "NONE", the output value in this field will be False. Otherwise, it will be Trus. |
+| | | | |
