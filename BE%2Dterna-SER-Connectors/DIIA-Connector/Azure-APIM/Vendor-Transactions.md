@@ -36,11 +36,11 @@ _The response is a single JSON object with the following format:_
 As mentioned above, the InformativePositions element of the output object is an array of object with the following structure:
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Id | | Purchase order line item ID |
-| | ArticleType | | Possible values: GOOD, SERVICE, IC |
-| | Currency | | Line item currency |
-| | Description | | The description of the goods, services or incidental costs |
-| | GRType | | Defines what type of item it is in relation to the goods receipt. The following values ​​are supported and affect the GR parameters: NONE, GREXPECTED, GRBIV.|
+| `PurchaseOrderNumber-LineNumber` | Id | PurchaseOrderConfirmationLines | Purchase order number with purchase order line number and a dash between them. |
+| `ProductType_BESer` | ArticleType | PurchaseOrderConfirmationLines | Possible values are GOOD or SERVICE, depending on the value in the field ProductType_BESer. |
+| CurrencyCode | Currency | PurchaseOrderConfirmationHeaders | Line item currency. |
+| LineDescription | Description | PurchaseOrderConfirmationLines | The description of the goods, services, or incidental costs. |
+| | GRType | PurchaseOrderConfirmationLines | Defines what type of item it is in relation to the goods receipt. The following values ​​are supported and affect the GR parameters: NONE, GREXPECTED, GRBIV. Multiple factors affect this output value. |
 | | NetUnit | | The net unit price of the purchase order line item |
 | | Quantity | | The quantity of purchase order line item |
 | | Unit | | The unit of purchase order line item |
