@@ -97,13 +97,11 @@ _A JSON/XML object with the following items:_
 | TaxNumber | | | |
 
 ## Outbound data (performPostResponse)
-_The response is in the following format:_
-- SearchResult - JSON array with the following fields:
-
-| Source | Destination | Comment |
-|--|--|--|
+_The response is a single JSON object with the following format:_
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
 | | Id| |
-| dataAreaId | CompanyCode |
-| | Number | | 
-| | FiscalYear | |
-| | Period | |
+| Date | | |
+| | Number | | |
+| | FiscalYear | | |
+| | Period | | |
