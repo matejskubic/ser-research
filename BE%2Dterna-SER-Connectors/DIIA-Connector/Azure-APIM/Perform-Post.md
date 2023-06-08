@@ -101,7 +101,7 @@ _The response is a single JSON object with the following format:_
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | | Id| |
-| Date | | |
+| | Date | | |
 | | Number | | |
 | | FiscalYear | | |
 | | Period | | |
