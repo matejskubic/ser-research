@@ -14,31 +14,87 @@ _A JSON/XML object with the following items:_
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | CompanyCode | dataAreaId | | Mandatory parameter |
-|  | Data | | Optional parameter. JSON object with the structure described in the table below. (*) |
+| Data | | | Optional parameter. JSON object with the structure described in the table below. (*) |
+| | | | |
 
 (*) <b>Data object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Amount | | JSON object with the structure described in the table below. (**)  |
-| | Date | | |
-| | OrderType | | |
-| | Positions | | JSON array with the elements whose structure described in the table below. (***) |
-| | RecipientId| | |
-| | Type | | |
-| | VendorId | | |
-| | BankId | | |
-| | ERP | | |
-| | Number | | |
-| | RecipientTransferTo | | |
-| | RecipientVATNumber | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+| Amount | | | JSON object with the structure described in the table below. (**)  |
+| Date | | | |
+| OrderType | | | |
+| Positions | | | JSON array with the elements whose structure described in the table below. (***) |
+| RecipientId | | | |
+| Type | | | |
+| VendorId | | | |
+| BankId | | | |
+| ERP | | | |
+| Number | | | |
+| RecipientTransferTo | | | |
+| RecipientVATNumber | | | |
+| SCBIndicator | | | |
+| SubsequentDebit | | | |
+| TermsOfPayment | | | |
+| Text | | | |
+| VendorOneTime | | | JSON object with the structure described in the table below. (****) |
+| VendorTransferFrom | | | |
+| VendorVATNumber | | | |
+| PaymentMethod | | | |
+| ESRReferenceNumber | | | |
+
+(**) <b>Amount object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| Currency | | | |
+| Gross | | | |
+| GrossDiscount | | | |
+| GrossTotal | | | |
+| Net | | | |
+| Tax | | | |
+
+(***) <b>Positions object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| NetUnit | | | |
+| Quantity | | | |
+| Tax | | | |
+| TaxCode | | | |
+| TaxRate | | | |
+| Type | | | |
+| Unit | | | |
+| Asset | | | |
+| CostCenter | | | |
+| ExternalItemNumber | | | |
+| Custom1 - Custom20 | | | |
+| Description | | | |
+| GLAccount | | | |
+| GRDeliveryNoteNumber | | | |
+| GRId | | | |
+| GRPosition | | | |
+| GRType | | | |
+| InternalOrder | | | |
+| OrderId | | | |
+| PositionId | | | |
+| Text | | | |
+| Total | | | |
+| WBSElement | | | |
+
+(****) <b>VendorOneTime object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| City | | | |
+| Country | | | |
+| Name | | | |
+| Street | | | |
+| ZIP | | | |
+| BIC | | | |
+| BankAccountNumber | | | |
+| BankCode | | | |
+| BankCountry | | | |
+| BankName | | | |
+| IBAN | | | |
+| Name2 | | | |
+| TaxNumber | | | |
 
 ## Outbound data (performPostResponse)
 _The response is in the following format:_
