@@ -13,9 +13,10 @@ _A JSON/XML object with the following items:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| CompanyCode | dataAreaId | | Mandatory parameter |
+| CompanyCode | dataAreaId | TaxGroupDatas, TaxItemGroups | Mandatory parameter |
 | Data | | | Optional parameter. JSON object with the structure described in the table below. (*) |
-| | | | |
+| | Date | | |
+| | Document | | Optional parameter. JSON object with the structure described in the table below. (*****) |
 
 (*) <b>Data object structure</b>
 | Source | Destination | Data entity | Comment |
@@ -95,6 +96,17 @@ _A JSON/XML object with the following items:_
 | IBAN | | | |
 | Name2 | | | |
 | TaxNumber | | | |
+
+(*****) <b>Document object structure</b>
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | Database| | |
+| | DocumentId | | |
+| | GUID | | |
+| | IECM | | |
+| | MimeType | | |
+| | WebCube | | |
+| | HCSId | | |
 
 ## Outbound data (performPostResponse)
 _The response is a single JSON object with the following format:_
