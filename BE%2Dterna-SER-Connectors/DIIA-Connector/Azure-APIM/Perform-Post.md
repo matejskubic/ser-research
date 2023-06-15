@@ -14,7 +14,7 @@ _A JSON/XML object with the following items:_
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | CompanyCode | dataAreaId | TaxGroupDatas, TaxItemGroups | Mandatory parameter |
-| Data | | | Optional parameter. JSON object with the structure described in the table below. (*) |
+| Data | | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
 | | Date | | |
 | | Document | | Optional parameter. JSON object with the structure described in the table below. (*****) |
 
