@@ -3,11 +3,10 @@
 #_API Methods_
 
 ##`POST`**/performPost**
-Post an invoice or credit memo.
- The performPost method's main objective is to post business documents of type _pending vendor invoice_ and invoice journal. The type of posted document is specified by the combination of values of the request attributes named _requestOrderType_ and _postingMethod_, the following way:
+ The performPost method's main objective is to post business documents of type _pending vendor invoice_ and _invoice journal_. The type of posted document is specified by the combination of values of the request attributes named _requestOrderType_ and _postingMethod_, the following way:
 - if requestOrderType = "WIPO" OR requestOrderType = "WOPO" AND postingMethod = "pendingInvoice", the posting method will be "pendingInvoice"
 - if requestOrderType = "WOPO" AND postingMethod = "journal", the posting method will be " journal".
-- In case of any other combination of values of these input values, an error is thrown.
+- In case of any other combination of values of these input parameters, an error is thrown.
 
 The final value is stored in the _postingMethodString_ context variable and used later in the code.
 
@@ -57,7 +56,9 @@ The next step is defining the set-body policy in which the whole request body is
             }
         ]
     }
+ It is required by the data contract that the request is sent as one JObject named _InvoiceRequest_, and that it contains another JObject named _Header_ and a JArray named _Lines_. As their names suggest, the first one contains all the invoice header data, and the other one all data invoice lines data. This _InvoiceRequest_ JObject is the output of the set-body code block.
 
+In order to prepare the data for this InvoiceRequest JObject, the mapping functionality is applied using multiple dictionaries, each corresponding to a certain JObject inside the SER request. For example, there is a positionsDict dictionary, which is used for mapping the order lines data. This mapping had to consider the exact names of the attributes from the targeting F&O data entities and map the input attributes with them accordingly. 
 
 
 ## Inbound data
