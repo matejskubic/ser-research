@@ -72,8 +72,8 @@ Eventually, the request data is transformed into a response object as defined by
 
 
 ##`POST`**/performPark**
-The overall processing scope of this method is almost the same as for the performPost method, with the main difference in the additional parameter in the InvoiceRequest 
-
+The overall processing scope of this method is almost the same as for the _performPost_ method, with the main difference in the additional parameter, named _PerformPosting_, with the value false, is added to the _InvoiceRequest_ JObject (more details about this object can be found above in this text). As there is no this property in the _performPost_ method, I assume that backend methods called from these APIM methods assume this parameter value is true if it's not specified. There are a few more additional parameters, necessary for posting the document, that are specified in the _performPost_, and not in the _performPark_ method. Everything else is the same.
+<br /><br />
 
 ## Inbound data
 _A JSON/XML object with the following items:_
