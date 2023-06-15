@@ -15,7 +15,7 @@ _A JSON/XML object with the following items:_
 |--|--|--|--|
 | CompanyCode | dataAreaId | TaxGroupDatas, TaxItemGroups | Mandatory parameter |
 | Data | | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
-| | Date | | |
+| | Date | InvoiceDate | |
 | | Document | | Optional parameter. JSON object with the structure described in the table below. (*****) |
 
 (*) <b>Data object structure</b>
@@ -24,31 +24,31 @@ _A JSON/XML object with the following items:_
 | Amount | | | JSON object with the structure described in the table below. (**)  |
 | Date | | | |
 | OrderType | | | |
-| Positions | | | JSON array with the elements whose structure described in the table below. (***) |
+| Positions | | | JSON array with the elements whose structure is described in the table below. (***) |
 | RecipientId | | | |
 | Type | | | |
-| VendorId | | | |
-| BankId | | | |
+| VendorId | VendorAccount | | |
+| BankId | BankAccount | | |
 | ERP | | | |
-| Number | | | |
+| Number | InvoiceNumber | | |
 | RecipientTransferTo | | | |
 | RecipientVATNumber | | | |
 | SCBIndicator | | | |
 | SubsequentDebit | | | |
 | TermsOfPayment | | | |
-| Text | | | |
+| Text | InvoiceDescription | | |
 | VendorOneTime | | | JSON object with the structure described in the table below. (****) |
 | VendorTransferFrom | | | |
 | VendorVATNumber | | | |
-| PaymentMethod | | | |
+| PaymentMethod | MethodOfPayment | | |
 | ESRReferenceNumber | | | |
 
 (**) <b>Amount object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| Currency | | | |
+| Currency | Currency | | |
 | Gross | | | |
-| GrossDiscount | | | |
+| GrossDiscount | TotalDiscount | | |
 | GrossTotal | | | |
 | Net | | | |
 | Tax | | | |
@@ -56,8 +56,8 @@ _A JSON/XML object with the following items:_
 (***) <b>Positions object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| NetUnit | | | |
-| Quantity | | | |
+| NetUnit | UnitPrice | | |
+| Quantity | ReceiveNow | | |
 | Tax | | | |
 | TaxCode | | | |
 | TaxRate | | | |
@@ -67,17 +67,18 @@ _A JSON/XML object with the following items:_
 | CostCenter | | | |
 | ExternalItemNumber | | | |
 | Custom1 - Custom20 | | | |
-| Description | | | |
+| Description | LineDescription | | |
 | GLAccount | | | |
 | GRDeliveryNoteNumber | | | |
 | GRId | | | |
 | GRPosition | | | |
 | GRType | | | |
 | InternalOrder | | | |
-| OrderId | | | |
-| PositionId | | | |
-| Text | | | |
-| Total | | | |
+| OrderId | PurchaseOrder | | |
+| PositionId | PurchLineNumber | | |
+| Text | ItemName | | |
+| Total | NetAmount | | |
+| Custom1 | ItemNumber | | | |
 | WBSElement | | | |
 
 (****) <b>VendorOneTime object structure</b>
