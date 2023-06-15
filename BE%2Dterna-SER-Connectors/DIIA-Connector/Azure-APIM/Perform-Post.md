@@ -1,4 +1,4 @@
-# Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`
+# Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'journal' or</span> `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'pendingInvoice'</span>
 
 #_API Methods_
 
@@ -22,7 +22,7 @@ _A JSON/XML object with the following items:_
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | Amount | | | JSON object with the structure described in the table below. (**)  |
-| Date | | | |
+| Date | Date | | |
 | OrderType | | | |
 | Positions | | | JSON array with the elements whose structure is described in the table below. (***) |
 | RecipientId | | | |
@@ -68,7 +68,7 @@ _A JSON/XML object with the following items:_
 | ExternalItemNumber | | | |
 | Custom1 - Custom20 | | | |
 | Description | LineDescription | | |
-| GLAccount | | | |
+| GLAccount | GLAccount | | Not used for direct save instead used by F&O service to create offset dimension |
 | GRDeliveryNoteNumber | | | |
 | GRId | | | |
 | GRPosition | | | |
@@ -77,7 +77,7 @@ _A JSON/XML object with the following items:_
 | OrderId | PurchaseOrder | | |
 | PositionId | PurchLineNumber | | |
 | Text | ItemName | | |
-| Total | NetAmount | | |
+| Total | NetAmount / Credit | | Depending on the posting method (pendingInvoice or journal) specified in the request |
 | Custom1 | ItemNumber | | | |
 | WBSElement | | | |
 
