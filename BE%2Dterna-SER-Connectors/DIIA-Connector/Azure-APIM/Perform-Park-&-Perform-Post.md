@@ -4,6 +4,60 @@
 
 ##`POST`**/performPost**
 Post an invoice or credit memo.
+ The performPost method's main objective is to post business documents of type _pending vendor invoice_ and invoice journal. The type of posted document is specified by the combination of values of the request attributes named _requestOrderType_ and _postingMethod_, the following way:
+- if requestOrderType = "WIPO" OR requestOrderType = "WOPO" AND postingMethod = "pendingInvoice", the posting method will be "pendingInvoice"
+- if requestOrderType = "WOPO" AND postingMethod = "journal", the posting method will be " journal".
+- In case of any other combination of values of these input values, an error is thrown.
+
+The final value is stored in the _postingMethodString_ context variable and used later in the code.
+
+In order to fill the tax specification for each invoice line, the data entities TaxGroupDatas and TaxItemGroups are called from the back-end F&O system. The returned values are stored in corresponding JArray objects, and these values are used later in the code when each invoice line is processed.
+
+The next step is defining the set-body policy in which the whole request body is defined and saved, and this is the biggest part of the policy code. The first job of the set-body policy section was to map the attributes from the SER request to the F&O backend service. In order to get a better understanding of what the backend request would look like a mockup request is shown below:
+
+    "InvoiceRequest": {
+        "Header": {
+            "PostingMethod": "pendingInvoice",
+            "dataAreaId": "demf"
+        },
+        "Lines": [
+            {
+                "LineNumber": "1",
+                "UnitPrice": 100,
+                "ReceiveNow": 1,
+                "SalesTaxGroup": "AP-EU",
+                "ItemSalesTax": "FULL",
+                "ItemNumber": "SER-TEST2"
+            },
+            {
+                "LineNumber": "2",
+                "UnitPrice": 100,
+                "ReceiveNow": 10,
+                "SalesTaxGroup": "AP-EU",
+                "CustomFieldMapping": {
+                    "CustomFieldNames": [
+                        "ItemSalesTax",
+                        "ItemNumber"
+                    ],
+                    "CustomFieldValues": [
+                        "FULL",
+                        "SER-TEST2"
+                    ]
+                },
+                "DimensionsData": {
+                    "DimensionsNames": [
+                        "CostCenter",
+                        "BusinessUnit"
+                    ],
+                    "DimensionsValues": [
+                        "007",
+                        "005"
+                    ]
+                }
+            }
+        ]
+    }
+
 
 ## Inbound data
 
