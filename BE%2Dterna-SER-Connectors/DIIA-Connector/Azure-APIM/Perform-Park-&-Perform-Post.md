@@ -62,7 +62,18 @@ In order to prepare the data for the InvoiceRequest JObject, the mapping functio
 
 After all the dictionaries for different request sections are specified, there is a section dealing with the invoice lines, which contains several other functionality implementations. One of them is custom financial dimensions mapping functionality, which works in a way so that custom attributes inside the request can be transformed into financial dimension information. A request header parameter named _posMapping_ was used for this purpose. It's a JSON value that contains the mapping information between the request name attribute and the financial dimension name from the backend system. If there are any dimensions, their values will be sent inside the request to the backend via the _DimensionsData_ JObject as shown in the request mockup above.
 
-After the set-body policy is finished a newly defined request is sent to the F&O backend service to a method called _postVendInvoice_, which will save the request as a vendor pending invoice or invoice journal for which the service method code execution will differ, depending on which document is selected. For the invoice journal document, a _JournalBatchNumber_ attribute is checked to see if the specified journal number already exists, and if it doesn’t, it is created using the _createJournalHeader_ method. Next, if any line data is present, the method _createJournalLine_ will be executed for each subsequent line. For the journal header, the _VendInvoiceJournalHeaderEntity_ is used, and for the journal line, the _VendInvoiceJournalLineEntity_ data entity is used. 
+After the set-body policy is finished a newly defined request is sent to the F&O backend service to a method called _postVendInvoice_, which will save the request as a vendor pending invoice or invoice journal for which the service method code execution will differ, depending on which document is selected. For the invoice journal document, a _JournalBatchNumber_ attribute is checked to see if the specified journal number already exists, and if it doesn’t, it is created using the _createJournalHeader_ method. Next, if any line data is present, the method _createJournalLine_ will be executed for each subsequent line. The _VendInvoiceJournalHeaderEntity_ is used for the journal header, and for the journal line, the _VendInvoiceJournalLineEntity_ data entity is used.
+
+A similar approach is used for pending vendor invoices but with different data entities. For the invoice header, the _VendorInvoiceHeaderEntity_ is used; for the invoice lines, the _VendorInvoiceLineEntity_ is used. What is also important is that all data that is saved inside F&O is returned to the API management service as a response, so that any additional checks or logic can be executed if needed.
+
+ After the backend response is received inside the API management, a specific code section is executed before the request is returned to the client. This code is placed in the _outbound_ section. One detail that needs to be noted here is the special document attachment section, which is defined so that, if the request contains a JObject named _Document_, an attachment for that invoice document should be created. A method named _performLink_ is created in the API management for that purpose, and it's called from both the _performPark_ and _performPost_ methods with all necessary attributes passed to it.
+
+Eventually, the request data is transformed into a response object as defined by SER and returned to the client.
+
+
+##`POST`**/performPark**
+The overall processing scope of this method is almost the same as for the performPost method, with the main difference in the additional parameter in the InvoiceRequest 
+
 
 ## Inbound data
 _A JSON/XML object with the following items:_
