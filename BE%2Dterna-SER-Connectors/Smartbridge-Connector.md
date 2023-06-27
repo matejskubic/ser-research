@@ -49,9 +49,9 @@ To set up Doxis Smartbridge Data and document configuration you must specify the
 
 
 
-**_______________________________________________________________________________________________________________________________________________________________________________________________________________**
+**__________________________________________________________________________________________________________________________________________________________________________________________________________**
 **NOTE**: it is mandatory to define one of the values above (either Smartbridge Workspace Url suffix or Smartbridge File Url suffix).
-**_______________________________________________________________________________________________________________________________________________________________________________________________________________**
+**__________________________________________________________________________________________________________________________________________________________________________________________________________**
 
 
 7. Enter **Filter**: define filter for querying data when triggering initial synchronization job. The filter configuration is used only when the synchronisation is run in the Initial (mass) synchronisation mode (see details in 5.2.1 Synchronisation/archiving modes).
