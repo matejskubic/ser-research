@@ -109,7 +109,7 @@ When the configuration is defined, the data and document synchronization between
 * Accounts receivable > Customers > All customers > Customer > Doxis > Transfer to Doxis
 * Accounts receivable > Orders > All sales orders > Sales order > Doxis > Transfer to Doxis
 
-**___________________________________________________________________________________________________________________**
+**____________________________________________________________________________________________________________________________________________________________________________________________________**
 
 To run the initial synchronization, you must go to **Organization administration > Doxis Smartbridge Integration > Doxis Data Sync.** It is recommended that the initial synchronization is triggered as a batch job to run in the background.
 The initial synchronization job runs the synchronization of all data and documents that are configured in 5.1.2 Doxis Smartbridge Data and document configuration according to the filtering parameters defined per each data entity.
