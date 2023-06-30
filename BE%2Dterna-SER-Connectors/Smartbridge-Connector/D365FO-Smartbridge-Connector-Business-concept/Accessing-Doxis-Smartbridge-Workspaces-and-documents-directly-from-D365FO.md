@@ -1,0 +1,6 @@
+When a synchronisation of specific data is triggered from D365FO, a business event is launched for a specific entity and a call to Doxis is created. The business event call to Doxis transfers data from the entity to the entity defined in the Doxis side, the data is mapped as we specified in the configuration in the **Doxis - F&O attributes mappings** field.
+After the entity has been created and after the data has been successfully sent to Doxis, an attachment in D365FO will be created. The document type of the attachment depends on the Doxis Smartbridge configuration for the selected entity:
+* When the configuration specifies the “Workspace” parameters, then an attachment of the type Doxis Workspace will be created.
+* When the configuration specifies the “File” parameters, then an attachment of the type Doxis File will be created and also an attachment of the type Doxis Workspace will be created.
+
+By clicking on the Open button in the Attachments form, a new web page will be opened with a direct link to the Doxis workspace or document. The page can only be accessed by a user that has accessing rights in Doxis Smartbridge application.
