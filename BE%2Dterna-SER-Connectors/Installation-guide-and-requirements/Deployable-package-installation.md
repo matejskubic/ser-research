@@ -27,8 +27,26 @@ After the package is in the project asset library, follow these steps to update 
 **Note: Package application causes system downtime.** All relevant services will be stopped, and you won't be able to use your environments while the package is being applied.
 
 After you've successfully applied the update in the sandbox environment and are ready to move the update over to the production environment, follow these steps to mark an update as a release candidate:
-1. Open the environment history page by selecting History > Environment changes on the environment details page.
+1. Open the environment history page by selecting **History > Environment** changes on the environment details page.
 2. Select the update to move over to the production environment.
-3. In the details for the update, select Mark as release candidate. The Is Release Candidate option is set to Yes.
+3. In the details for the update, select **Mark as release candidate.** The Is **Release Candidate** option is set to **Yes.**
+
+After you've marked an update as a release candidate, follow these steps to update your environment:
+1. Open the environment details page for the production environment.
+2. Select **Maintain > Update environment** to apply an update.
+3. In the **Available sandboxes** list, select the source sandbox environment where the update was applied, validated, and marked as a release candidate.
+4. In the grid, select the update to apply to the production environment. This grid shows only updates that have been marked as release candidates.
+5. In the **Downtime start** field, select a date and time. The environment will be taken down for servicing at the specified time on the specified date. The **Downtime end** is calculated automatically based on the expected duration.
+6. Select **Schedule.** LCS runs validations to make sure that the selected update is applicable to the environment. To prevent downgrade of the environment, the update isn't allowed if its application version is lower than the current environment version. If the update is **successfully** scheduled, an email notification is sent to all project stakeholders.
+7. After the update is completed, the environment history is updated. To view the environment history, select **History > Environment** changes on the environment details page.
+8. You can also download the logs from the environment history page.
+9. After the validations are completed, you can sign-off on the update from the environment history page by selecting either **Sign off** or **Sign off with issues.**
+
+
+More information about this topic can be found on Microsoft official sites:
+* [All-in-one deployable packages](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/dev-tools/aio-deployable-packages)
+* [Update an environment](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/updateenvironment-newinfrastructure)
+* [Apply updates to cloud environments](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/apply-deployable-package-system)
+* [Manage third-party models and runtime packages by using source control](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/dev-tools/manage-runtime-packages)
 
 
