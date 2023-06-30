@@ -1,0 +1,3 @@
+D365FO Smartbridge connector introduces only one Business event named **SER_Doxis_SmartBridge_BusinessEvent**, which is a generic business event that is triggered for each document or data that is configured within the Doxis Smartbridge Data and document configuration.
+
+For achieving an automatic document and data synchronization the business event **SER_Doxis_SmartBridge_BusinessEvent**  must be activated for a selected legal entity (All about Business events and this type of integration in D365FO can be found on [Microsoft official web documentation](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/business-events/home-page))
