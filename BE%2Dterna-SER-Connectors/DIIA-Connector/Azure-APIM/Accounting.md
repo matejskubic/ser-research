@@ -1,29 +1,109 @@
-TBD
-<!--
-# Target data entity: 
-
 #_API Methods_
 
 ## **checkAccounting**
-Returns all assets for the specified company code and the current date.
+Check of account assignment data for invoices without a purchase order reference.
 
 ## Inbound data
 
-_The data is sent as a JSON object with the following mapping: _
-| Source | Destination | Comment |
-|--|--|--|
-| Id | FixedAssetNumber |
-
-## Outbound data (searchAssetsResponse)
-_The response arrives in the following format:_
-- SearchResult - JSON array with the following fields:
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
 
 | Source | Destination | Comment |
 |--|--|--|
-| FixedAssetNumber | Id| |
-| dataAreaId | CompanyCode |
-| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
-| Name| Description | |
-| FixedAssetGroupId | Category | |
-- Truncated (true or false, depending on whether all the data is displayed or not)
--->
+| CompanyCode | dataAreaId | Mandatory parameter |
+| DocumentDate | |
+| Data | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
+
+(*) <b>Data object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| Amount | | | JSON object with the structure described in the table below. (**)  |
+| Date | Date | |
+| OrderType | | |
+| Positions | | JSON array with the elements whose structure is described in the table below. (***) |
+| RecipientId | | |
+| Type | | |
+| VendorId | VendorAccount | |
+| BankId | BankAccount | |
+| ERP | | |
+| Number | InvoiceNumber | |
+| RecipientTransferTo | | |
+| RecipientVATNumber | | |
+| SCBIndicator | | |
+| SubsequentDebit | | |
+| TermsOfPayment | | |
+| Text | InvoiceDescription | |
+| VendorOneTime | | JSON object with the structure described in the table below. (****) |
+| VendorTransferFrom | | |
+| VendorVATNumber | | |
+| PaymentMethod | MethodOfPayment | |
+| ESRReferenceNumber | | |
+
+(**) <b>Amount object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| Currency | Currency | |
+| Gross | | |
+| GrossDiscount | TotalDiscount | |
+| GrossTotal | | |
+| Net | | |
+| Tax | | |
+
+(***) <b>Positions object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| NetUnit | UnitPrice | |
+| Quantity | ReceiveNow | |
+| Tax | | |
+| TaxCode | | |
+| TaxRate | | |
+| Type | | |
+| Unit | | |
+| Asset | | |
+| CostCenter | | |
+| ExternalItemNumber | | |
+| Custom1 - Custom20 | | |
+| Description | LineDescription | |
+| GLAccount | GLAccount | Not used for direct save instead used by F&O service to create offset dimension |
+| GRDeliveryNoteNumber | | |
+| GRId | | |
+| GRPosition | | |
+| GRType | | |
+| InternalOrder | | |
+| OrderId | PurchaseOrder | |
+| PositionId | PurchLineNumber | |
+| Text | ItemName | |
+| Total | NetAmount / Credit | Depending on the posting method (pendingInvoice or journal) specified in the request |
+| Custom1 | ItemNumber | | |
+| WBSElement | | |
+
+(****) <b>VendorOneTime object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| City | | |
+| Country | | |
+| Name | | |
+| Street | | |
+| ZIP | | |
+| BIC | | |
+| BankAccountNumber | | |
+| BankCode | | |
+| BankCountry | | |
+| BankName | | |
+| IBAN | | |
+| Name2 | | |
+| TaxNumber | | |
+
+## Outbound data (checkPostingResponse)
+_The processed inbound data is sent to the API service at the URL BESer_Services/SERInvoiceService/CheckAccounting, and the response from there is a single JSON object with the following format:_
+| Source | Destination  | Comment |
+|--|--|--|
+| | Result| JSON array with just one element, whose structure is described in the table below. (*) |
+
+(*) <b>Result item object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| | Code | Error code, if an error is detected during the checking |
+| | Message | Error message, if an error is detected during the checking |
+| | Type | Message type |
