@@ -44,7 +44,7 @@ _The processed inbound data is sent to the API service at the URL BESer_Services
 | | Message | Validation message |
 
 <span style="font-weight: normal">(*****)</span> <b>_Fields_ object structure</b>
-All the elements of the Fields object are with the same structure, and their structure is described in the table labeled _Fields elements' object structure (***)_.
+All the elements of the Fields object are with the same structure, and their structure is described in the table labeled Fields elements' object structure (***).
 | Source | Destination | Comment |
 |--|--|--|
 | | Asset | JSON object |
