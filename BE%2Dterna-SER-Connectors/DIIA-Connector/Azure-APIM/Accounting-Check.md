@@ -43,4 +43,22 @@ _The processed inbound data is sent to the API service at the URL BESer_Services
 | | Message | Validation message |
 
 (**) <b>_Fields_ object structure</b>
-All the elements of the Fields object are with the same structure, and their structure is described in the table labeled Fields elements' object structure ( ***).
+All the elements of the Fields object are with the same structure, and their structure is described in the table labeled **Fields elements' object structure** ( ***).
+| Source | Destination | Comment |
+|--|--|--|
+| | Asset | |
+| | CostCenter | |
+| | Custom1 - Custom4| |
+| | | |
+| | | |
+| | | |
+| | | |
+| | | |
+
+(***) **Fields elements' object structure**
+| Source | Destination | Comment |
+|--|--|--|
+| | Valid | true/false |
+| | Code | Validation code. Omitted if the validation result is true. |
+| | Message | Validation message. Omitted if the validation result is true. |
+| | Values | A JSON array containing the values related to the validation (if any). |
