@@ -13,87 +13,25 @@ _A JSON/XML object with the following items:_
 |--|--|--|
 | CompanyCode | dataAreaId | Mandatory parameter |
 | DocumentDate | |
-| Data | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
-
-(*) <b>Data object structure</b>
-| Source | Destination | Comment |
-|--|--|--|
-| Amount | | | JSON object with the structure described in the table below. (**)  |
-| Date | Date | |
-| OrderType | | |
-| Positions | | JSON array with the elements whose structure is described in the table below. (***) |
+| Positions | | Mandatory parameter. JSON array containing objects with the structure described in the table below. (*) |
 | RecipientId | | |
 | Type | | |
-| VendorId | VendorAccount | |
-| BankId | BankAccount | |
-| ERP | | |
-| Number | InvoiceNumber | |
-| RecipientTransferTo | | |
-| RecipientVATNumber | | |
-| SCBIndicator | | |
-| SubsequentDebit | | |
-| TermsOfPayment | | |
-| Text | InvoiceDescription | |
-| VendorOneTime | | JSON object with the structure described in the table below. (****) |
-| VendorTransferFrom | | |
-| VendorVATNumber | | |
-| PaymentMethod | MethodOfPayment | |
-| ESRReferenceNumber | | |
+| VendorId | | |
+| Date | | |
 
-(**) <b>Amount object structure</b>
+(*) <b>Positions item object structure</b>
 | Source | Destination | Comment |
 |--|--|--|
-| Currency | Currency | |
-| Gross | | |
-| GrossDiscount | TotalDiscount | |
-| GrossTotal | | |
-| Net | | |
-| Tax | | |
-
-(***) <b>Positions object structure</b>
-| Source | Destination | Comment |
-|--|--|--|
-| NetUnit | UnitPrice | |
-| Quantity | ReceiveNow | |
-| Tax | | |
-| TaxCode | | |
-| TaxRate | | |
-| Type | | |
-| Unit | | |
-| Asset | | |
+| Id| | |
+| Type | |
+| Asset | |
 | CostCenter | | |
-| ExternalItemNumber | | |
-| Custom1 - Custom20 | | |
-| Description | LineDescription | |
-| GLAccount | GLAccount | Not used for direct save instead used by F&O service to create offset dimension |
-| GRDeliveryNoteNumber | | |
-| GRId | | |
-| GRPosition | | |
-| GRType | | |
+| ExternalItemNumber | |
+| Custom1 - Custom20| | <span style="color:red">Not implemented</span> |
+| GLAccount | | |
 | InternalOrder | | |
-| OrderId | PurchaseOrder | |
-| PositionId | PurchLineNumber | |
-| Text | ItemName | |
-| Total | NetAmount / Credit | Depending on the posting method (pendingInvoice or journal) specified in the request |
-| Custom1 | ItemNumber | | |
-| WBSElement | | |
-
-(****) <b>VendorOneTime object structure</b>
-| Source | Destination | Comment |
-|--|--|--|
-| City | | |
-| Country | | |
-| Name | | |
-| Street | | |
-| ZIP | | |
-| BIC | | |
-| BankAccountNumber | | |
-| BankCode | | |
-| BankCountry | | |
-| BankName | | |
-| IBAN | | |
-| Name2 | | |
-| TaxNumber | | |
+| RAType | | |
+| WBSElement| | |
 
 ## Outbound data (checkPostingResponse)
 _The processed inbound data is sent to the API service at the URL BESer_Services/SERInvoiceService/CheckAccounting, and the response from there is a single JSON object with the following format:_
