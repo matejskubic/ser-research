@@ -15,7 +15,6 @@ _A JSON/XML object with the following items:_
 |--|--|--|
 | CompanyCode | dataAreaId | Mandatory parameter |
 | Data | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
-| Data | | Mandatory parameter. JSON object with the structure described in the table below. (*) |
 
 (*) <b>Data object structure</b>
 | Source | Destination | Comment |
@@ -99,10 +98,13 @@ _A JSON/XML object with the following items:_
 
 ## Outbound data (checkPostingResponse)
 _The response is a single JSON object with the following format:_
-| Source | Destination | Data entity | Comment |
-|--|--|--|--|
-| | Id| |
-| | Date | | |
-| | Number | | |
-| | FiscalYear | | |
-| | Period | | |
+| Source | Destination  | Comment |
+|--|--|--|
+| | Result| JSON array with just one element, whose structure is described in the table below. (*) |
+
+(*) <b>Result item object structure</b>
+| Source | Destination | Comment |
+|--|--|--|
+| | Code | Error code, if an error is detected during the checking |
+| | Message | Error message, if an error is detected during the checking |
+| | Type | Message type |
