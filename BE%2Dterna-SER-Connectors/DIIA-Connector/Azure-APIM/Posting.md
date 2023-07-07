@@ -96,3 +96,13 @@ _A JSON/XML object with the following items:_
 | IBAN | | |
 | Name2 | | |
 | TaxNumber | | |
+
+## Outbound data (checkPostingResponse)
+_The response is a single JSON object with the following format:_
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | Id| |
+| | Date | | |
+| | Number | | |
+| | FiscalYear | | |
+| | Period | | |
