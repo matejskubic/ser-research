@@ -48,12 +48,10 @@ All the elements of the Fields object are with the same structure, and their str
 |--|--|--|
 | | Asset | |
 | | CostCenter | |
-| | Custom1 - Custom4| |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+| | Custom1 - Custom4 | |
+| | GLAccount | |
+| | InternalOrder | |
+| | WBSElement | |
 
 (***) **Fields elements' object structure**
 | Source | Destination | Comment |
