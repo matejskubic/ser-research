@@ -34,8 +34,7 @@ _A JSON/XML object with the following items:_
 | WBSElement| | |
 
 ## Outbound data (checkAccountingResponse)
-_The processed inbound data is sent to the API service at the URL BESer_Services/SERInvoiceService/CheckAccounting, and the response from there is a single JSON object with the following format:_
-
+_The processed inbound data is sent to the API service at the URL BESer_Services/SERInvoiceService/CheckAccounting, and the response from there is a single JSON object with the following format:_ 
 | Source | Destination  | Comment |
 |--|--|--|
 | | Fields | JSON object with the structure described in the table below. (**) |
@@ -43,11 +42,5 @@ _The processed inbound data is sent to the API service at the URL BESer_Services
 | | Code | Validation code |3
 | | Message | Validation message |
 
-<span style="font-weight: normal">(*****)</span> <b>_Fields_ object structure</b>
-All the elements of the Fields object are with the same structure, and their structure is described in the table labeled Fields elements' object structure (***).
-| Source | Destination | Comment |
-|--|--|--|
-| | Asset | JSON object |
-| | CostCenter | JSON objects with the structure described below (***) |
-| | Type | Message type |
-
+(**) <b>_Fields_ object structure</b>
+All the elements of the Fields object are with the same structure, and their structure is described in the table labeled Fields elements' object structure ( ***).
