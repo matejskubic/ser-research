@@ -1,5 +1,3 @@
-# Target data entity: `data/ExchangeRatesCDSEntity`
-
 #_API Methods_
 
 ##`POST` **/checkPosting**
