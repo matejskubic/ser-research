@@ -1,4 +1,5 @@
 Vendor-Master-Data
+Assets-Master-Data
 Vendor-Invoice-Journal
 Units
 Terms-of-Payment
@@ -11,6 +12,5 @@ GL-Accounts-Master-Data
 External-Item-Numbers
 Exchange-Rates
 Cost-Centers-Master-Data
-Assets-Master-Data
 Vendor-Purchase-Orders
 WBS-Element-Structure
