@@ -1,5 +1,6 @@
 Assets-Master-Data
 Vendor-Invoice-Journal
+Cost-Centers-Master-Data
 Units
 Terms-of-Payment
 Tax-Data
@@ -10,7 +11,6 @@ Internal-Orders
 GL-Accounts-Master-Data
 External-Item-Numbers
 Exchange-Rates
-Cost-Centers-Master-Data
 WBS-Element-Structure
 Vendor-Master-Data
 Vendor-Purchase-Orders
