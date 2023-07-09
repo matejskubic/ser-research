@@ -3,6 +3,7 @@ Vendor-Invoice-Journal
 Cost-Centers-Master-Data
 Exchange-Rates
 Units
+External-Item-Numbers
 Terms-of-Payment
 Tax-Data
 Recipient-Master-Data
@@ -10,7 +11,6 @@ Purchase-Order-Data
 Payment-Methods
 Internal-Orders
 GL-Accounts-Master-Data
-External-Item-Numbers
 WBS-Element-Structure
 Vendor-Master-Data
 Vendor-Purchase-Orders
