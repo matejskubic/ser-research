@@ -13,9 +13,9 @@ _A JSON/XML object with the following items:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| Id | In the case of vendor invoice journal (`data/VendInvoiceJournalHeaders` data entity):<ul><li>dataAreaId</li><li>journalNumber</li><li>journalName</li></ul>In the case of pending vendor invoice (`data/BESer_VendTrans` data entity):<ul><li>dataAreaId</li><li>AccountNum</li><li>Invoice</li></ul>| Mandatory parameter. The parameter is a pipe-delimited array containing the values for identifying the invoice type. In case the parameter value has 2 pipes, it's a vendor invoice journal, and if there are 3 pipes, it a pending vendor invoice. Otherwise, an error message is thrown. The values contained in this parameter are listed in the Destination column. |
+| Id | In the case of vendor invoice journal (`data/VendInvoiceJournalHeaders` data entity):<ul><li>dataAreaId</li><li>journalNumber</li><li>journalName</li></ul>In the case of pending vendor invoice (`data/BESer_VendTrans` data entity):<ul><li>dataAreaId</li><li>AccountNum</li><li>Invoice</li></ul>| Mandatory parameter. The parameter is a pipe-delimited array containing the values for identifying the invoice type. In case the parameter value has 2 pipes, it's a vendor invoice journal, and if there are 3 pipes, it is a pending vendor invoice. Otherwise, an error message is thrown. The values contained in this parameter are listed in the Destination column. |
 | FinancialDimension | FinancialDimension | Optional parameter |
 | DimensionValue | DimensionValue | Optional parameter |
 
 ## Outbound data (searchCustomResponse)
-_The response is just a status code with the possible values:<ul><li>200 (OK) - The invoice is posted</li><li>0 - The invoice is not posted</li><li>500 - The invoice is not found, or some other error occurred.</li></ul>
+_The response is just a status code with the possible values:<ul><li>200 (OK) - The invoice is posted</li><li>0 - The invoice is not posted</li><li>500 - The invoice is not found, or some other error occurred. </li></ul><span style='color:red'>An improvement might be needed; I think at least a simple output string can be created with the values "Posted", "Not posted" and "Not found", expecting that the response code will be 200 either way.</span>
