@@ -8,7 +8,7 @@ Returns whether the invoice is posted or open.
 ## Inbound data
 
 _A JSON/XML object with the following items:_
-- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved. <span style='color:red'>Not needed here as the query retrieves only 1 record.</span>
 - data. The sub-object containing the data values with the mapping:
 
 | Source | Destination | Comment |
@@ -18,15 +18,4 @@ _A JSON/XML object with the following items:_
 | DimensionValue | DimensionValue | Optional parameter |
 
 ## Outbound data (searchCustomResponse)
-_The response is a JSON array with the following fields:
-
-| Source | Destination | Comment |
-|--|--|--|
-| DimensionValue | DimensionValue | |
-| Description | Description |
-| CompanyCode | CompanyCode | | 
-| GroupDimension | GroupDimension | |
-| IsSuspended | IsSuspended | |
-| IsBlockedForManualEntry | IsBlockedForManualEntry | |
-| IsTotal | IsTotal | |
-- Truncated (true or false, depending on whether all the data is displayed or not)
+_The response is just a status code with the possible values:
