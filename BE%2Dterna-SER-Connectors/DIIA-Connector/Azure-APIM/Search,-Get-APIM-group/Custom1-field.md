@@ -1,6 +1,35 @@
-# Target data entity: `data/FinancialDimensionValues`
+# Target data entity: `data/ReleasedProductsV2`, <span style='font-size:smaller'>including `ProductV2` sub-entity.</span>
 
 #_API Methods_
+
+##`POST`**/searchCustom1**
+This is an empty function that can be used to implement the logic for custom account assignment field 1.
+
+## Inbound data
+
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
+| Source | Destination | Comment |
+|--|--|--|
+| CompanyCode | dataAreaId | Mandatory parameter |
+| Id | FixedAssetNumber | Optional parameter |
+| Description | Name | Optional parameter |
+| Category| FixedAssetGroupId | Optional parameter |
+
+## Outbound data (searchAssetsResponse)
+_The response is in the following format:_
+- SearchResult - JSON array with the following fields:
+
+| Source | Destination | Comment |
+|--|--|--|
+| FixedAssetNumber | Id| |
+| dataAreaId | CompanyCode |
+| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
+| Name| Description | |
+| FixedAssetGroupId | Category | |
+- Truncated (true or false, depending on whether all the data is displayed or not)
 
 ##`POST`**/getCustom1**
 This is an empty function that can be used to implement the logic for custom account assignment field 1.
