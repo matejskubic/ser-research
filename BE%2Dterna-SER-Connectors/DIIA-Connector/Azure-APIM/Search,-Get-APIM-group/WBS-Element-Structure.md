@@ -21,10 +21,10 @@ _A JSON/XML object with the following items:_
 | Date | StartDate | Optional parameter |
 | Description | Description | Optional parameter |
 | GLAccount | | <span style='color:red'>Not implemented</span> |
-| InternalOrder | ProjectId | |
+| InternalOrder | ProjectId | Optional parameter |
 | Manager | | <span style='color:red'>Not implemented</span> |
 | ManagerNumber | | <span style='color:red'>Not implemented</span> |
-| Project | Task | |
+| Project | Task | Optional parameter |
 
 ## Outbound data (searchWBSElementResponse)
 _The response is in the following format:_
