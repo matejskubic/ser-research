@@ -18,4 +18,4 @@ _A JSON/XML object with the following items:_
 | DimensionValue | DimensionValue | Optional parameter |
 
 ## Outbound data (searchCustomResponse)
-_The response is just a status code with the possible values:
+_The response is just a status code with the possible values:<ul><li>200 (OK) - The invoice is posted</li><li>0 - The invoice is not posted</li><li>500 - The invoice is not found, or some other error occurred.</li></ul>
