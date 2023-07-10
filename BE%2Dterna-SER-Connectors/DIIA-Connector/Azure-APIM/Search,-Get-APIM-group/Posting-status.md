@@ -13,7 +13,7 @@ _A JSON/XML object with the following items:_
 
 | Source | Destination | Comment |
 |--|--|--|
-| Id | dataAreaId | Mandatory parameter |
+| Id | In the case of vendor invoice journal:<ul><li></li><li></li><li></li></ul>In the case of pending vendor invoice:<ul><li></li><li></li><li></li></ul>| Mandatory parameter. The parameter is a pipe-delimited array containing the values for identifying the invoice type. In case the parameter value has 2 pipes, it's a vendor invoice journal, and if there are 3 pipes, it a pending vendor invoice. Otherwise, an error message is thrown. The values contained in this parameter are listed in the Destination column. |
 | FinancialDimension | FinancialDimension | Optional parameter |
 | DimensionValue | DimensionValue | Optional parameter |
 
