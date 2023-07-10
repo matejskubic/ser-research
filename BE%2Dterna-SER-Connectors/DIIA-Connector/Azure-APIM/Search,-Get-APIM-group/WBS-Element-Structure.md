@@ -1,4 +1,4 @@
-# Target data entity: `data/ProjectWBSDrafts`
+# Target data entity: `data/ProjectWBSDrafts`, <span style='font-size:smaller'>including `Projects` sub-entity.</span>
 
 #_API Methods_
 
@@ -34,11 +34,11 @@ _The response is in the following format:_
 |--|--|--|
 | dataAreaId\|ProjectId\|WBSId\|Task | Id | Pipe-concatenated string containing the values from the 4 fields listed in the column _Source_. |
 | dataAreaId | CompanyCode |
-| StartDate | Date | Displayed in the format "yyyy-MM-dd"<br />Note: this Date parameter is not actually implemented in the filtering. | 
-| | Description | |
-| | Manager | |
-| | ManagerNumber | |
-| | Project | |
+| StartDate | Date | Displayed in the format "yyyy-MM-dd" | 
+| | Description | <span style='color:red'>Not implemented</span> |
+| WorkerResponsiblePersonnelNumber | Manager | From the Projects data entity. |
+| WorkerResponsiblePersonnelNumber | ManagerNumber | From the Projects data entity. |
+| Task | Project | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 # Target data entity: `data/ProjectWBSDrafts`
