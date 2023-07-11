@@ -18,4 +18,4 @@ _A JSON/XML object with the following items:_
 | DimensionValue | DimensionValue | Optional parameter |
 
 ## Outbound data (searchCustomResponse)
-_The response is just a status code with the possible values:<ul><li>200 (OK) - The invoice is posted</li><li>0 - The invoice is not posted</li><li>500 - The invoice is not found, or some other error occurred. </li></ul><span style='color:red'>An improvement might be needed here; I think at least a simple output string can be created with the values "Posted", "Not posted" and "Not found", expecting that the response code will be 200 either way.</span>
+_The response is a string with the possible values:<ul><li>200 - The invoice is posted</li><li>0 - The invoice is not posted</li><li>500 - The invoice is not found, or some other error occurred. </li></ul>
