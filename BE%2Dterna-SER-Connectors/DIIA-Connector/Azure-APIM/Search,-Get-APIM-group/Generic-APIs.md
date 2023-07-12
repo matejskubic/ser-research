@@ -46,15 +46,5 @@ Body:
     "Description": "testing Patch via Postman"
 }
 
-
-| Parameter name| Parameter type | Comment |
-|--|--|--|
-| EntityName | Template parameter (string) | Mandatory |
-| $top | Query parameter (int) | Optional |
-| $filter | Query parameter (string) | Optional |
-| $select | Query parameter (string) | Optional |
-| $orderby | Query parameter (string) | Optional |
-| cross-company | Query parameter () | Optional |
-
 ## Outbound data (searchAssetsResponse)
-_The response is a list of elements from the specified data entity that satisfies the filtering criteria._
+_If the record is successfully updated, the response comes with an empty body and the status code 204._
