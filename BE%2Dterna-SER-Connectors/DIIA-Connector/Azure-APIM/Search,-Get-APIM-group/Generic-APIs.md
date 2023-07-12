@@ -40,7 +40,7 @@ Updates the specified record in the specified data entity.
 ## Inbound data
 _The Inbound data consists of the entity name, followed by the field values needed for uniquely identifying a single record from the data entity in the URL, and a JSON object containing all the fields that need to be updated, with their new values. An example of the inbound data from Postman would be:_
 URL:
-{{apiUrl}}/data/CustomerGroups(dataAreaId='usmf',CustomerGroupId='tes-t005')?cross-company=true
+{{apiUrl}}/data/CustomerGroups(dataAreaId='usmf',CustomerGroupId='test-005')?cross-company=true
 Body:
 {
     "Description": "testing Patch via Postman"
