@@ -1,5 +1,4 @@
 Generic-APIs
-SCB-Indicators
 Cost-Centers-Master-Data
 Custom1-field
 Custom-field
@@ -12,6 +11,7 @@ Internal-Orders
 Payment-Methods
 Purchase-Order-Data
 Recipient-Master-Data
+SCB-Indicators
 Tax-Data
 Vendor-Invoice-Journal
 Vendor-Master-Data
