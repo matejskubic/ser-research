@@ -43,7 +43,7 @@ _The response arrives in the following format:_
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 ##`POST`**/getVendorMasterData**
-Returns details of the first vendor that satisfies the filtering criteria.
+Returns detailed information about the vendor that satisfies the filtering criteria.
 ## Inbound data
 _A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
