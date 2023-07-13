@@ -3,7 +3,7 @@
 #_API Methods_
 
 ##`POST`**/searchVendorMasterData**
-Returns a list with basic information about the Recipients for the passed filtering criteria.
+Returns a list with basic information about the Vendors for the passed filtering criteria.
 
 ## Inbound data
 _A JSON/XML object with the following items:_
@@ -43,7 +43,7 @@ _The response arrives in the following format:_
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 ##`POST`**/getVendorMasterData**
-Returns details of the first asset that satisfies the filtering criteria.
+Returns details of the first vendor that satisfies the filtering criteria.
 ## Inbound data
 _A JSON/XML object with the following items:_
 - maxHits. Optional parameter that indicates the number of records that need to be returned. Unnecessary here, as only one record is eventually retrieved.
