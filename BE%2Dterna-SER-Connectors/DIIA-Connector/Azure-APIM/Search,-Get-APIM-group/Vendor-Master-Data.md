@@ -3,7 +3,7 @@
 #_API Methods_
 
 ##`POST`**/searchVendorMasterData**
-Returns a list with basic information about the Vendors that satisfy passed filtering criteria.
+Conducts a search for vendor master data.
 
 ## Inbound data
 _A JSON/XML object with the following items:_
