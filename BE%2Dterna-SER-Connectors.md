@@ -11,6 +11,8 @@ This document has three main parts:
 * D365FO Smartbridge configuration, architecture
 
 # Information about BE-terna Microsoft Dyamics 365 for Dataverse Connectors for SER Doxis
+Solution is allowing a configurable 1-way integration of entity metadata from Dataverse to Doxis solution document folders. Syncronization is triggered either manually or using the registered plugin steps as described in the manual. Azure infrastructure is used to transpose the documents according to the configuration to the Doxis endpoints.
+
 Please read the [Configuration Manual](https://dev.azure.com/BE-terna-SER/SER-Doxis/_git/SER-Doxis-Dataverse?path=/ConfigurationManual.docx) for the architetecture overview and specific configuration options of the solution.
 
 * Doxis is an extremely agile, scalable and secure platform for ECM, BPM and collabora-tion applications of all kinds. Through APIs and connectors, Doxis provides information, manages cross-system processes and connects to Dataverse / Dynamics CRM and other systems.
