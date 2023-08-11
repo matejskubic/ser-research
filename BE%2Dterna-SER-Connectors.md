@@ -25,9 +25,6 @@ Please read the [Configuration Manual](https://dev.azure.com/BE-terna-SER/SER-Do
 ** Installed Doxis Connector Solution
 ** Installed Doxis Connector Solution Configuration (file that stores the configuration)
 
-Environments:
-https://operations-be-ser-dev.crm4.dynamics.com/
-
 **Dataverse organizacije** 
 
 * Development
