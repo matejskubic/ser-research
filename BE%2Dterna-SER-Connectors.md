@@ -11,7 +11,7 @@ This document has three main parts:
 * D365FO Smartbridge configuration, architecture
 
 # Information about BE-terna Microsoft Dyamics 365 for Dataverse Connectors for SER Doxis
-Please read the [Configuration Manual](https://dev.azure.com/BE-terna-SER/SER-Doxis/_git/SER-Doxis-Dataverse?path=/ConfigurationManual.docx)
+Please read the [Configuration Manual](https://dev.azure.com/BE-terna-SER/SER-Doxis/_git/SER-Doxis-Dataverse?path=/ConfigurationManual.docx) for the architetecture overview and specific configuration options of the solution.
 
 * Doxis is an extremely agile, scalable and secure platform for ECM, BPM and collabora-tion applications of all kinds. Through APIs and connectors, Doxis provides information, manages cross-system processes and connects to Dataverse / Dynamics CRM and other systems.
 * Azure components
@@ -24,3 +24,26 @@ Please read the [Configuration Manual](https://dev.azure.com/BE-terna-SER/SER-Do
 * Dataverse / Dynamics 365 organization
 ** Installed Doxis Connector Solution
 ** Installed Doxis Connector Solution Configuration (file that stores the configuration)
+
+Environments:
+https://operations-be-ser-dev.crm4.dynamics.com/
+
+**Dataverse organizacije** 
+
+* Development
+https://operations-be-ser-dev.crm4.dynamics.com (environment: be-ser-dev, Subscription: BE-terna (Part of Telefónica Tech), directory id: ff76d581-3569-4f50-9fe6-81d7f3166345)
+
+**CRM Solutions**
+* Doxis Connector Solution Configuration (This should be exported as unmanaged as it contains the initial solution configuration)
+* Doxis Connector Solution (This should be exported as managed as it contains configuration application files)
+
+**Azure Middleware components**
+* Log Analytics workspace
+* Application Insights
+* Azure Monitor workspace
+* BeTerna-SER-CRM-Config	App Configuration Service
+* BeTerna-SER-CRM-WebHooks-NET6	Function App
+* D365-document-managament-SER-Doxis-DEV-APIM	API Management service
+* D365-SER-Doxis-DEV-KV	Key vault
+* doxis.be-terna.net	DNS zone
+* doxiswebhooksnet6	Storage account
