@@ -1,4 +1,4 @@
-# Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'journal' or</span> `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'pendingInvoice'</span>
+# Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/JournalNames`, `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'journal' or</span> `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'pendingInvoice'.</span>
 
 #_API Methods_
 
