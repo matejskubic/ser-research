@@ -10,3 +10,5 @@ D365FO Smartbridge connector includes several separated duties that can be inclu
 * Doxis transfer vendor
 * Doxis transfer purchase order 
 * Doxis transfer sales order
+* Doxis transfer opportunities
+* Doxis transfer sales quotations
