@@ -4,7 +4,8 @@ When the configuration is defined, the data and document synchronization between
 
 ![wiki slika.png](/.attachments/wiki%20slika-2ad77d5d-fd95-4eee-a4ad-ddb596c31209.png)
 
-* **Initial (mass) synchronization**: this option enables the initial transferring of all already existing documents and data in D365FO to Doxis Smartbridge when the connector is configured for the first time. 
+* **Initial (mass) synchronization**: this option enables the initial transferring of all already existing documents and data in D365FO to Doxis Smartbridge when the connector is configured for the first time. To run the initial synchronization, you must go to **Organization administration > Doxis Smartbridge Integration > Doxis Data Sync.** It is recommended that the initial synchronization is triggered as a batch job to run in the background.
+The initial synchronization job runs the synchronization of all data and documents that are configured in 5.1.2 Doxis Smartbridge Data and document configuration according to the filtering parameters defined per each data entity.
 
 **____________________________**
 
@@ -13,8 +14,9 @@ When the configuration is defined, the data and document synchronization between
 * Accounts payable > Purchase orders > All purchase orders > Purchase order > Doxis -> Transfer to Doxis
 * Accounts receivable > Customers > All customers > Customer > Doxis > Transfer to Doxis
 * Accounts receivable > Orders > All sales orders > Sales order > Doxis > Transfer to Doxis
+* Sales and marketing > Relationships > Opportunities > All opportunities > Opportunity > Doxis > Transfer to Doxis
+* Sales and marketing > Sales quotations > All quotations > Sales quotation > Doxis > Transfer to Doxis
 
-**____________________________________________________________________________________________________________________________________________________________________________________________________**
 
-To run the initial synchronization, you must go to **Organization administration > Doxis Smartbridge Integration > Doxis Data Sync.** It is recommended that the initial synchronization is triggered as a batch job to run in the background.
-The initial synchronization job runs the synchronization of all data and documents that are configured in 5.1.2 Doxis Smartbridge Data and document configuration according to the filtering parameters defined per each data entity.
+**_________________________________**
+
