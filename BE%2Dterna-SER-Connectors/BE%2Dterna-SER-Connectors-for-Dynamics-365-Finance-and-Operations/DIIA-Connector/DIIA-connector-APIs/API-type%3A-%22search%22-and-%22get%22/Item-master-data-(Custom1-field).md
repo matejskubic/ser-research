@@ -1,4 +1,4 @@
-# Target data entity: `data/ReleasedProductsV2`, <span style='font-size:smaller'>including `ProductV2` sub-entity.</span>
+# D365FO Target data entity: `data/ReleasedProductsV2`, <span style='font-size:smaller'>including `ProductV2` sub-entity.</span>
 
 #_API Methods_
 
