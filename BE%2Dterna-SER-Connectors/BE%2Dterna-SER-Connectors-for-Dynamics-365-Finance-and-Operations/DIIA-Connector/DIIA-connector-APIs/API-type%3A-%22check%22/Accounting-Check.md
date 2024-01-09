@@ -1,6 +1,6 @@
 #_API Methods_
 
-## **checkAccounting**
+##`POST` **/checkAccounting**
 Check of account assignment data for invoices without a purchase order reference.
 
 ## Inbound data
