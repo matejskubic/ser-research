@@ -1,4 +1,4 @@
-# Target data entity: `data/FixedAssetsV2`
+# D365FO Target data entity: `data/FixedAssetsV2`
 
 #_API Methods_
 
