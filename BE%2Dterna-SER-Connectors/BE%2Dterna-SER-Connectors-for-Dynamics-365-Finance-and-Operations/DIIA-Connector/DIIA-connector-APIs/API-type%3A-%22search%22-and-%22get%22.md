@@ -1,0 +1,17 @@
+APis for the following data are included:
+- Assets master data
+- Cost Centers Master Data
+- Item master data (custom1)
+- Financial dimension master data (custom)
+- Exchange rates
+- External item numbers
+- General ledger accounts master data
+- Projects master data (Internal Orders)
+- Invoice document posting status data
+- Payment methods master data
+- Purchase orders master data
+- Legal entity (invoice document recipient) master data
+- Tax master data
+- Vendor terms of payment master data
+- Invoice documents state data
+- 
