@@ -1,9 +1,9 @@
+## D365FO Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders with ProductReceiptLines`, `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/TaxCodeValuesV2`
+
 #_API Methods_
 
 ##`POST`**/getPurchaseOrderData**
 Returns information about the purchase order with the specified order number.
-
-## Target data entities: `data/PurchaseOrderConfirmationHeaders with PurchaseOrderConfirmationLines`, `data/ProductReceiptHeaders with ProductReceiptLines`, `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/TaxCodeValuesV2`
 
 ## Inbound data
 
