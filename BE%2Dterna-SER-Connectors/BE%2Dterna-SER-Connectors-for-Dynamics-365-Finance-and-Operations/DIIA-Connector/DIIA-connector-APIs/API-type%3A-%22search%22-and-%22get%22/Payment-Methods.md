@@ -1,4 +1,4 @@
-# Target data entity: `data/VendorPaymentMethods`
+# D365FO Target data entity: `data/VendorPaymentMethods`
 
 #_API Methods_
 
