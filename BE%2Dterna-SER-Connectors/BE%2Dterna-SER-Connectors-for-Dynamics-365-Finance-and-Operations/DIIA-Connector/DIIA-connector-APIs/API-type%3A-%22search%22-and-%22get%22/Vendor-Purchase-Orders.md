@@ -1,4 +1,4 @@
-# Target data entity: `data/PurchaseOrderHeadersV2`
+# D365FO Target data entity: `data/PurchaseOrderHeadersV2`
 
 #_API Methods_
 
