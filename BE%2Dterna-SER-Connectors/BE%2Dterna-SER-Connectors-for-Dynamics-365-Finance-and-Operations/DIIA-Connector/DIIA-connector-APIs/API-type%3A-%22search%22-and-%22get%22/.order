@@ -4,7 +4,6 @@ Custom1-field
 Custom-field
 Exchange-Rates
 External-Item-Numbers
-Generic-APIs
 GL-Accounts-Master-Data
 Internal-Orders
 Posting-status
@@ -18,4 +17,5 @@ Vendor-Invoice-Journal
 Vendor-Master-Data
 Vendor-Purchase-Orders
 Units
+Generic-APIs
 WBS-Element-Structure
