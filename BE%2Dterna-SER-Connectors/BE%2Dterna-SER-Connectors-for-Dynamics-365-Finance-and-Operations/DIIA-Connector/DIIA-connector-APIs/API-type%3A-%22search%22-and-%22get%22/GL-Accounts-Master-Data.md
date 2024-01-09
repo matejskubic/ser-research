@@ -1,6 +1,6 @@
-#_API Methods_
+# D365FO Target data entity: `data/MainAccountCompanies`
 
-# Target data entity: `data/MainAccountCompanies`
+#_API Methods_
 
 ##`POST`**/searchGLAccounts**
 Returns a list with basic information about the GL accounts for the passed filtering criteria.
