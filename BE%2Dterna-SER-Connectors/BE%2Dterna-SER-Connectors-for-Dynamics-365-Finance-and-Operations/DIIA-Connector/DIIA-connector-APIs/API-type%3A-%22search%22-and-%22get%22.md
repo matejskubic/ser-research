@@ -1,8 +1,8 @@
 APis for the following data are included:
 - Assets master data
 - Cost Centers Master Data
-- Item master data (custom1)
-- Financial dimension master data (custom)
+- Items master data (custom1)
+- Financial dimensions master data (custom)
 - Exchange rates
 - External item numbers
 - General ledger accounts master data
