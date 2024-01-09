@@ -3,7 +3,7 @@
 ##`POST`**/getTaxCode**
 Returns all assets for the specified company code and the current date.
 
-# Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
+# D365FO Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
 
 ## Inbound data
 
@@ -33,7 +33,7 @@ _The response is in the following format:_
 ##`POST`**/getTaxRates**
 Determination of tax rates for automatic extraction.
 
-# Target data entity: `data/TaxCodeValuesV2`
+# D365FO Target data entity: `data/TaxCodeValuesV2`
 
 ## Inbound data
 _A JSON/XML object with the following items:_
