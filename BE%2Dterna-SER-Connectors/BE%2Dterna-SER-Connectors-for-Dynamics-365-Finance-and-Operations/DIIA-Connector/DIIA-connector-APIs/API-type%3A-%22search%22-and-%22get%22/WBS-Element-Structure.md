@@ -1,4 +1,4 @@
-# Target data entity: `data/ProjectWBSDrafts`, <span style='font-size:smaller'>including `Projects` sub-entity.</span>
+# D365FO Target data entity: `data/ProjectWBSDrafts`, <span style='font-size:smaller'>including `Projects` sub-entity.</span>
 
 #_API Methods_
 
@@ -41,7 +41,7 @@ _The response is in the following format:_
 | Task | Project | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
-# Target data entity: `data/ProjectWBSDrafts`
+# D365FO Target data entity: `data/ProjectWBSDrafts`
 
 #_API Methods_
 
