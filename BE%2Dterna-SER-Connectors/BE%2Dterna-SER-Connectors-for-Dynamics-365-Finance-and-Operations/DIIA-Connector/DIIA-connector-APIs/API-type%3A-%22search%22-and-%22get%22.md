@@ -14,4 +14,9 @@ APis for the following data are included:
 - Tax master data
 - Vendor terms of payment master data
 - Invoice documents state data
-- 
+- Vendors master data
+- Purchase orders master data
+- Units of measure master data
+- WBS element structure master data
+- SCB indicators data
+- General D365FO API
