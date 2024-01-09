@@ -1,4 +1,4 @@
-# Target data entity: `data/BESer_VendInvoiceJours`
+# D365FO Target data entity: `data/BESer_VendInvoiceJours`
 
 #_API Methods_
 
