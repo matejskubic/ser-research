@@ -1,4 +1,4 @@
-# Target data entity: `data/Projects`
+# D365FO Target data entity: `data/Projects`
 
 #_API Methods_
 
