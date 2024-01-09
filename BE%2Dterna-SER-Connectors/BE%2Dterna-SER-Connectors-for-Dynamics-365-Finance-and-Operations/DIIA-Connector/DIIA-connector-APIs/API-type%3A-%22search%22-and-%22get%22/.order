@@ -10,7 +10,6 @@ Posting-status
 Payment-Methods
 Purchase-Order-Data
 Recipient-Master-Data
-SCB-Indicators
 Tax-Data
 Terms-of-Payment
 Vendor-Invoice-Journal
@@ -18,4 +17,5 @@ Vendor-Master-Data
 Vendor-Purchase-Orders
 Units
 WBS-Element-Structure
+SCB-Indicators
 Generic-APIs
