@@ -1,4 +1,4 @@
-# Target data entity: `data/CostCenters`
+# D365FO Target data entity: `data/CostCenters`
 
 #_API Methods_
 
