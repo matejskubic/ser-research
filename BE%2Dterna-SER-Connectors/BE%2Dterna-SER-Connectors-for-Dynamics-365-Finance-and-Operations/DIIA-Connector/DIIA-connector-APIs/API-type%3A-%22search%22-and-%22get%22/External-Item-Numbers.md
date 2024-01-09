@@ -1,4 +1,4 @@
-# Target data entity: `data/VendorProductDescriptionsV2`
+# D365FO Target data entity: `data/VendorProductDescriptionsV2`
 
 #_API Methods_
 
