@@ -1,4 +1,4 @@
-# Target data entity: `data/FinancialDimensionValues`
+# D365FO Target data entity: `data/FinancialDimensionValues`
 
 #_API Methods_
 
