@@ -1,4 +1,4 @@
-# Target data entity: `/data/VendorsV2`
+# D365FO Target data entity: `/data/VendorsV2`
 
 #_API Methods_
 
