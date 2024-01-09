@@ -1,4 +1,4 @@
-# Target data entity: `data/ExchangeRatesCDSEntity`
+# D365FO Target data entity: `data/ExchangeRatesCDSEntity`
 
 #_API Methods_
 
