@@ -1,4 +1,4 @@
-# Target data entity: `data/VendInvoiceJournalHeaders`<span style='font-size:small'> or `data/BESer_VendTrans`, depending on the structure of data->Id parameter.</span>
+# D365FO Target data entity: `data/VendInvoiceJournalHeaders`<span style='font-size:small'> or `data/BESer_VendTrans`, depending on the structure of data->Id parameter.</span>
 
 #_API Methods_
 
