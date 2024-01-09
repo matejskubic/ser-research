@@ -5,7 +5,7 @@ Optimizes the invoice processing process between D365FO and SER Doxis by providi
 * **D365FO Smartbridge Connector**
 Enables automatic archiving of D365FO documents and data into SER Doxis Smartbridge providing a 360°view over processes and partners.
 
-This document has three main parts:
+This document has the following parts:
 * Installation guide and requirements
 * D365FO DIIA Connector configuration, architecture and API structure 
 * D365FO Smartbridge configuration, architecture
