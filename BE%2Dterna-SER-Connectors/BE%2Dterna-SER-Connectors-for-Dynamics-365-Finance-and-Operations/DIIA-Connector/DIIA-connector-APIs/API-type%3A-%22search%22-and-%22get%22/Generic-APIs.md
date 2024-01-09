@@ -1,8 +1,8 @@
-# Target data entity: `Any existing data entity. The data entity name is one of the inbound parameters`
+# D365FO Target data entity: `Any existing data entity. The data entity name is one of the inbound parameters`
 
 #_API Method_
 
-Unlike all the other methods from this API Management, the parameters for these methods are sent 
+Unlike all the other API methods which are specifically design for a selected type of data, this enables to query an data in D365FO that is available through a data entity.
 
 ##`GET` **/data/{EntityName}**
 Retrieves data from F&O through the specified data entity.
