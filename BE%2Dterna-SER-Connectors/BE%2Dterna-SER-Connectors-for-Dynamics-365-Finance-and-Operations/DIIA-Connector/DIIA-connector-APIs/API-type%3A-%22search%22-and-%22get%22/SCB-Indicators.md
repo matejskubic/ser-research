@@ -1,1 +1,1 @@
-<span style='color:red'>NOT IMPLEMENTED</span>
+This API is not implemented for D365FO connector.
