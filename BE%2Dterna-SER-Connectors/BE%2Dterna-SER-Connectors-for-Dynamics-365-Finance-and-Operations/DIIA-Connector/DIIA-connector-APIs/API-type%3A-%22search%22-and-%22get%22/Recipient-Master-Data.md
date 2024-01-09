@@ -1,4 +1,4 @@
-# Target data entity: `data/LegalEntities`
+# D365FO Target data entity: `data/LegalEntities`
 
 #_API Methods_
 
