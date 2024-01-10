@@ -3,7 +3,7 @@
 #_API Methods_
 
 ##`POST`**/performLink**
-Links an attachment to an invoice that has already been posted. The method is called from the PerformPark and PerformPost methods, when a document needs to be attached to an invoice or credit memo.
+Links an attachment to an invoice. The method is also called from the PerformPark and PerformPost methods, when a document needs to be attached to an invoice or credit memo during it's creation.
 
 ## Inbound data
 
