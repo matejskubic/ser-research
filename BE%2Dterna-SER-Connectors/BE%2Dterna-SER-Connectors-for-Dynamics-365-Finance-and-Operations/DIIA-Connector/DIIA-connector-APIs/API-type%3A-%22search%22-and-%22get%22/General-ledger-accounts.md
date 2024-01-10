@@ -25,7 +25,7 @@ _The response is in the following format:_
 |--|--|--|
 | MainAccountId | Id |
 | LegalEntityId| CompanyCode | Lowercase |
-| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br /><div style="color:red">Note: this parameter is not actually implemented in the search criteria.</div> |
+| | Date | If the Date value is passed in the parameters, that value is shown; otherwise, the current date is shown. The value is displayed in the format "yyyy-MM-dd"<br />Note: this parameter is not part of the search criteria. |
 - Truncated (true or false, depending on whether all the data is displayed or not)
 
 
