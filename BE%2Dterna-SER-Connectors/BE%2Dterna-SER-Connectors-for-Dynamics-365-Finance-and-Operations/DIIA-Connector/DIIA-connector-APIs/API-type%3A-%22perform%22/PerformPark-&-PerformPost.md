@@ -3,7 +3,7 @@
 #_API Methods_
 
 ##`POST`**/performPost**
- The performPost method's main objective is to post business documents of type _pending vendor invoice_ and _invoice journal_. The type of posted document is specified by the combination of values of the request attributes named _requestOrderType_ and _postingMethod_, the following way:
+ The performPost method's main objective is to post business invoice documents as _pending vendor invoices_ or _invoice journals_ in D365FO. The type of posted document is specified by the combination of values of the request attributes named _requestOrderType_ and _postingMethod_, the following way:
 - if requestOrderType = "WIPO" OR requestOrderType = "WOPO" AND postingMethod = "pendingInvoice", the posting method will be "pendingInvoice"
 - if requestOrderType = "WOPO" AND postingMethod = "journal", the posting method will be " journal".
 - In case of any other combination of values of these input parameters, an error is thrown.
@@ -72,7 +72,7 @@ Eventually, the request data is transformed into a response object as defined by
 
 
 ##`POST`**/performPark**
-The overall processing scope of this method is almost the same as for the _performPost_ method, with the main difference in the additional parameter, named _PerformPosting_, with the value false, is added to the _InvoiceRequest_ JObject (more details about this object can be found above in this text). As there is no this property in the _performPost_ method, I assume that backend methods called from these APIM methods assume this parameter value is true if it's not specified. There are a few additional parameters necessary for posting the document that are specified in the _performPost_, not in the _performPark_ method. Everything else is the same.
+The overall processing scope of this method is almost the same as for the _performPost_ method, with the main difference that the created document in D365FO is not posted. 
 <br /><br />
 
 ## Inbound data
