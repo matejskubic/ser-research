@@ -1,4 +1,6 @@
-APis for the following validations are included:
+APis for the following data are included:
 
-Invoice document consistency validation
+- Invoice creation and posting (PerformPost)
+- Invoice creation (PerformPark)
+- (PerformLink)
 Invoice account assignment validation
