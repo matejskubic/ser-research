@@ -1,4 +1,4 @@
-# Target data entities: `data/VendorInvoiceHeaders`, `data/BESer_VendorInvoiceDocumentAttachements`, `data/BESer_PostedVendorInvoiceDocumentAttachements`, `data/InvoiceJournalHeaderAttachments_BESer`
+# D365FO Target data entities: `data/VendorInvoiceHeaders`, `data/BESer_VendorInvoiceDocumentAttachements`, `data/BESer_PostedVendorInvoiceDocumentAttachements`, `data/InvoiceJournalHeaderAttachments_BESer`
 
 #_API Methods_
 
