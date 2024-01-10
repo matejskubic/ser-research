@@ -16,7 +16,7 @@ _A JSON/XML object with the following items:_
 | Id | PurchaseOrderNumber | ProductReceiptHeaders | |
 | CompanyCode | dataAreaId | ProductReceiptHeaders, PurchaseOrderConfirmationHeaders | |
 | Type | PurchaseOrderStatus | PurchaseOrderConfirmationHeaders | Certain item types are to be determined via the type. Possible values are NONE, OPEN, POSTED, and RETURNED. |
-| Date | | | Corresponds to the posting date (ISO 8601 format) if the line items are to be determined retrospectively. <div style="color:red">Not implemented.</div>|
+| Date | | | Corresponds to the posting date (ISO 8601 format) if the line items are to be determined retrospectively. Note: Not implemented by design.|
 
 
 ## Outbound data (getPurchaseOrderDataResponse)
@@ -47,21 +47,21 @@ As mentioned above, the InformativePositions element of the output object is an 
 | | Variances | | JSON object containing the tolerable quantity and price variance for a line item. The object's structure is shown in the table below. (***) |
 | ItemNumber or ProcurementProductCategoryName| ArticleNoCustomer | PurchaseOrderConfirmationLines| Customer's article number |
 | ExternalItemNumber | ArticleNoVendor | PurchaseOrderConfirmationLines | Vendor's article number |
-| | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. <div style="color: red">Not implemented. </div> |
+| | RAType | | Defines whether the item requires review and approval. Possible values: DONE, REQUIRED. Note: Not implemented by design. |
 | | TaxCode | TaxGroupDatas | The tax code of purchase order line item |
 | | TaxRate | TaxCodeValuesV2 | The tax rate of purchase order line item. Expected format: 0.03 for 3%; 1.00 for 100% |
-| | AlternativePackagings | | List of alternative package sizes (min. 1 object). <div style="color: red">Not implemented. </div> |
+| | AlternativePackagings | | List of alternative package sizes (min. 1 object). Note: Not implemented by design. |
 | ProductReceiptDate | GRDate | ProductReceiptHeaders | Corresponds to the goods receipt date (ISO 8601 format), as it is stored in the ERP system. |
 | ProductReceiptNumber | GRDeliveryNoteNumber | ProductReceiptLines | The list of delivery numbers from the delivery note. |
 | RecordId | GRId | ProductReceiptLines | The goods receipt number that corresponds to the ID in the ERP system. |
-| | GRPosition | | The line item ID from the goods receipt. <div style="color: red">Not implemented.</div> |
+| | GRPosition | | The line item ID from the goods receipt. Note: Not implemented by design. |
 
 (**) <b>TermsOfPayment object structure</b>
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Discounts | | JSON array containing discount details, sorted ascending by 'Days'. <div style="color: red">Not implemented. </div> |
+| | Discounts | | JSON array containing discount details, sorted ascending by 'Days'. Note: Not implemented by design. |
 | FixedDueDate - AccountingDate | DueDays | PurchaseOrderConfirmationHeaders | Number of days until payment is due.  |
-| | Id | | Terms of payment key. <div style="color: red">Not implemented. </div> |
+| | Id | | Terms of payment key. Note: Not implemented by design. |
 | AccountingDate | BaseLineDate | PurchaseOrderConfirmationHeaders | Baseline date in terms of payment (in ISO 8601 format) |
 | VendorPaymentMethodName | PaymentMethod | PurchaseOrderConfirmationHeaders | |
 
@@ -79,4 +79,4 @@ As mentioned above, the InformativePositions element of the output object is an 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
 | | Type | | Type of the variance. Possible values: NONE, RELATIVE, ABSOLUTE, UNLIMITED. For the Downward items, the output value is always "UNLIMITED", and for the Uprard values, it is always "NONE". |
-| | Value | | The value of the variance for type 'RELATIVE' or 'ABSOLUTE'. The value of the variance that is still possible is returned for type 'ABSOLUTE'. The expected format for type 'RELATIVE': 0.03 for 3%; 1.00 for 100%. <div style="color: red">Not implemented. </div> |
+| | Value | | The value of the variance for type 'RELATIVE' or 'ABSOLUTE'. The value of the variance that is still possible is returned for type 'ABSOLUTE'. The expected format for type 'RELATIVE': 0.03 for 3%; 1.00 for 100%. Note: Not implemented by design. |
