@@ -1,1 +1,1 @@
-This API is not implemented for D365FO connector.
+This API is not implemented by design.
