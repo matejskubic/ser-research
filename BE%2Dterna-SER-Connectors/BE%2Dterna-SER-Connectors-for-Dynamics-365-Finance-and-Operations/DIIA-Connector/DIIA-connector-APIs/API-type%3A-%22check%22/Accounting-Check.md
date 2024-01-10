@@ -27,7 +27,7 @@ _A JSON/XML object with the following items:_
 | Asset | |
 | CostCenter | | |
 | ExternalItemNumber | |
-| Custom1 - Custom20| | <span style="color:red">Not implemented</span> |
+| Custom1 - Custom20| | Not implemented by design |
 | GLAccount | | |
 | InternalOrder | | |
 | RAType | | |
