@@ -1,6 +1,5 @@
-APis for the following data are included:
+APIs for the following data are included:
 
-- Invoice creation and posting (PerformPost)
-- Invoice creation (PerformPark)
-- (PerformLink)
-Invoice account assignment validation
+- Invoice document creation and posting (PerformPost)
+- Invoice document creation (PerformPark)
+- Invoice document attachment link creation (PerformLink)
