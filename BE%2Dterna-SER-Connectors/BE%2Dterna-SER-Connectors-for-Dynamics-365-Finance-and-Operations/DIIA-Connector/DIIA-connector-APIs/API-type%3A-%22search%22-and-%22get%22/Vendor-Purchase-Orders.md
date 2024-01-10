@@ -15,7 +15,7 @@ _A JSON/XML object with the following items:_
 |--|--|--|
 | CompanyCode | dataAreaId | Mandatory parameter |
 | VendorId | InvoiceVendorAccountNumber | Mandatory parameter |
-| Date | | Optional parameter. <div style="color: red">Not implemented. </div> |
+| Date | | Optional parameter. Note: Not implemented by design. |
 
 ## Outbound data (getVendorPurchaseOrdersResponse)
 _The response is in the following format:_
