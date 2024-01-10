@@ -8,7 +8,7 @@ Returns whether the invoice is posted or open.
 ## Inbound data
 
 _A JSON/XML object with the following items:_
-- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved. <span style='color:red'>Not needed here as the query is supposed to retrieve up to 1 record.</span>
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved. However, this parameter is not needed to be set as the query is designed to retrieve up to 1 record.
 - data. The sub-object containing the data values with the mapping:
 
 | Source | Destination | Comment |
