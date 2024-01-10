@@ -23,7 +23,7 @@ _The response is in the following format:_
 | Source | Destination | Comment |
 |--|--|--|
 | OperatingUnitNumber | Id| |
-|  | CompanyCode | <div style="color:maroon">This seems to be the value passed as an input parameter, although the parameter is not implemented in the filtering.</div> |
+|  | CompanyCode | The value is only passed from the input parameter, but otherwise not affecting the search in D365FO, due to Cost center data being a Company shared entity. |
 | | Date | Current date in the "yyyy-MM-dd" format.| 
 | Name| Description | |
 - Truncated (true or false, depending on whether all the data is displayed or not)
