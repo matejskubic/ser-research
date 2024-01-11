@@ -77,8 +77,15 @@ _The response is in the following format:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
-| | Id | | Equal to the ID specified in the query |
-| TaxCodeId | Code | TaxCodeValuesV2 | 
-| | PossibleCode | TaxCodeValuesV2 | A string array. If no tax code could be determined unambiguously, the most plausible tax code will be passed in the 'Code' parameter, and other possible tax codes will be listed in 'PossibleCode' |
-|  | Rate | Tax code rate. Expected format: 0.03 for 3%; 1.00 for 100%. Equal to the TaxRate value specified in the query |
+ |dataAreaId | dataAreaId |  | Equal to the ID specified in the query |
+| TaxGroupId | TaxGroupId |  | 
+| TaxCodeId | TaxCodeId |  |  |
+| UseTax | UseTax |  |
+| TaxExemptCodeId | TaxExemptCodeId |  |
+| IntracomVAT | IntracomVAT| | |
+| ReverseCharge | ReverseCharge | | |
+| BrazilianTaxationCode | BrazilianTaxationCode | | |
+| ExemptTax | ExemptTax | | |
+
+
 
