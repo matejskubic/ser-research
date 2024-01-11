@@ -1,4 +1,4 @@
-# D365FO Target service: `BESer_Services/SERInvoiceService/CheckAccounting`
+# D365FO Target service: `BESer_Services/SERInvoiceService/CheckPosting`
 
 #_API Methods_
 
