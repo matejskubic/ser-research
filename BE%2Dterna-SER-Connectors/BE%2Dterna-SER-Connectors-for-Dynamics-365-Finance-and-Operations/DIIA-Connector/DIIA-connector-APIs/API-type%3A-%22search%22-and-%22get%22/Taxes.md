@@ -77,6 +77,39 @@ _The response is in the following format:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
+ |dataAreaId | dataAreaId | TaxGroupDatas | Equal to the ID specified in the query |
+| TaxGroupId | TaxGroupId | TaxGroupDatas | 
+| TaxCodeId | TaxCodeId | TaxGroupDatas |  |
+| UseTax | UseTax | TaxGroupDatas |
+| TaxExemptCodeId | TaxExemptCodeId | TaxGroupDatas |
+| IntracomVAT | IntracomVAT| TaxGroupDatas | |
+| ReverseCharge | ReverseCharge | TaxGroupDatas | |
+| BrazilianTaxationCode | BrazilianTaxationCode | TaxGroupDatas | |
+| ExemptTax | ExemptTax | TaxGroupDatas | |
+
+##`POST`**/getItemTaxGroup**
+Returns Tax codes in Sales tax groups for the specified company code.
+
+# D365FO Target data entities: `TaxItemGroups`
+
+## Inbound data
+
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| CompanyCode | dataAreaId | TaxItemGroups | Mandatory parameter |
+| TaxItemGroupCode | TaxItemGroupCode | TaxItemGroups | Optional parameter. Item sales tax group code in D365FO. |
+| TaxCodeId | TaxCodeId | TaxItemGroups | Optional parameter. Sales tax code in D365FO. |
+
+## Outbound data (getItemTaxGroupResponse)
+_The response is in the following format:_
+- Result - JSON array with the following fields:
+
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
  |dataAreaId | dataAreaId |  | Equal to the ID specified in the query |
 | TaxGroupId | TaxGroupId |  | 
 | TaxCodeId | TaxCodeId |  |  |
@@ -86,6 +119,5 @@ _The response is in the following format:_
 | ReverseCharge | ReverseCharge | | |
 | BrazilianTaxationCode | BrazilianTaxationCode | | |
 | ExemptTax | ExemptTax | | |
-
 
 
