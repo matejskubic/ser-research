@@ -3,7 +3,7 @@
 ##`POST`**/getTaxCode**
 Returns all tax codes for the specified company code.
 
-# D365FO Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
+# D365FO Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `data/TaxCodeValuesV2`
 
 ## Inbound data
 
@@ -57,7 +57,7 @@ _The response is in the following format:_
 ##`POST`**/getVendorTaxGroup**
 Returns Tax codes in Sales tax groups for the specified company code.
 
-# D365FO Target data entities: `TaxGroupDatas`
+# D365FO Target data entities: `data/TaxGroupDatas`
 
 ## Inbound data
 
@@ -90,7 +90,7 @@ _The response is in the following format:_
 ##`POST`**/getItemTaxGroup**
 Returns Tax codes in Sales tax groups for the specified company code.
 
-# D365FO Target data entities: `TaxItemGroups`
+# D365FO Target data entities: `data/TaxItemGroups`
 
 ## Inbound data
 
