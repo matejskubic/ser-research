@@ -96,7 +96,7 @@ _A JSON/XML object with the following items:_
 | Positions | | | JSON array with the elements whose structure is described in the table below. (***) |
 | RecipientId | | | |
 | Type | | | |
-| VendorId | VendorAccount | | |
+| VendorId | VendorAccount | |Mandatory |
 | BankId | BankAccount | | |
 | ERP | | | |
 | Number | InvoiceNumber | | |
