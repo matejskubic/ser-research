@@ -110,14 +110,15 @@ _The response is in the following format:_
 
 | Source | Destination | Data entity | Comment |
 |--|--|--|--|
- |dataAreaId | dataAreaId |  | Equal to the ID specified in the query |
-| TaxGroupId | TaxGroupId |  | 
-| TaxCodeId | TaxCodeId |  |  |
-| UseTax | UseTax |  |
-| TaxExemptCodeId | TaxExemptCodeId |  |
-| IntracomVAT | IntracomVAT| | |
-| ReverseCharge | ReverseCharge | | |
-| BrazilianTaxationCode | BrazilianTaxationCode | | |
-| ExemptTax | ExemptTax | | |
+ |dataAreaId | dataAreaId | TaxItemGroups  | Equal to the ID specified in the query |
+| TaxItemGroupCode | TaxItemGroupCode | TaxItemGroups  | 
+| TaxCodeId | TaxCodeId | TaxItemGroups  |  |
+| TaxationCode | TaxationCode | TaxItemGroups  |
+| TaxExemptCodeId | TaxExemptCodeId | TaxItemGroups  |
+| EUSalesListType | EUSalesListType | TaxItemGroups  | |
+| TaxExemptCode | TaxExemptCode | TaxItemGroups  | |
+| Description | Description | TaxItemGroups  | |
+| WithoutTaxCredit | WithoutTaxCredit | TaxItemGroups  | |
+| ExemptTax | ExemptTax | TaxItemGroups | |
 
 
