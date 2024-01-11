@@ -1,7 +1,7 @@
 #_API Methods_
 
 ##`POST`**/getTaxCode**
-Returns all assets for the specified company code and the current date.
+Returns all tax codes for the specified company code.
 
 # D365FO Target data entities: `data/VendorsV3`, `data/TaxGroupDatas`, `TaxCodeValuesV2`
 
@@ -53,3 +53,32 @@ _The response is in the following format:_
 | Source | Destination | Comment |
 |--|--|--|
 | Value | | |
+
+##`POST`**/getVendorTaxGroup**
+Returns Tax codes in Sales tax groups for the specified company code.
+
+# D365FO Target data entities: `TaxGroupDatas`
+
+## Inbound data
+
+_A JSON/XML object with the following items:_
+- maxHits. Optional parameter that indicates the number of records that need to be returned. If it's not set, 100 records are retrieved.
+- data. The sub-object containing the data values with the mapping:
+
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| CompanyCode | dataAreaId | TaxGroupDatas | Mandatory parameter |
+| TaxGroupId| TaxGroupId | TaxGroupDatas | Optional parameter. Sales tax group code in D365FO. |
+| TaxCodeId | TaxCodeId | TaxGroupDatas | Optional parameter. Sales tax code in D365FO. |
+
+## Outbound data (getVendorTaxGroupResponse)
+_The response is in the following format:_
+- Result - JSON array with the following fields:
+
+| Source | Destination | Data entity | Comment |
+|--|--|--|--|
+| | Id | | Equal to the ID specified in the query |
+| TaxCodeId | Code | TaxCodeValuesV2 | 
+| | PossibleCode | TaxCodeValuesV2 | A string array. If no tax code could be determined unambiguously, the most plausible tax code will be passed in the 'Code' parameter, and other possible tax codes will be listed in 'PossibleCode' |
+|  | Rate | Tax code rate. Expected format: 0.03 for 3%; 1.00 for 100%. Equal to the TaxRate value specified in the query |
+
