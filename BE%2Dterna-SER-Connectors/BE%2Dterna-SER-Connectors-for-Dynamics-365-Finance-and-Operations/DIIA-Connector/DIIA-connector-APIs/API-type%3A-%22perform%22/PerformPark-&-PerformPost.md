@@ -130,6 +130,8 @@ _A JSON/XML object with the following items:_
 | Quantity | ReceiveNow | | |
 | Tax | | | |
 | TaxCode | | | |
+| VendorTaxGroup | | | |
+| ItemTaxGroup | | | |
 | TaxRate | | | |
 | Type | | | |
 | Unit | | | |
