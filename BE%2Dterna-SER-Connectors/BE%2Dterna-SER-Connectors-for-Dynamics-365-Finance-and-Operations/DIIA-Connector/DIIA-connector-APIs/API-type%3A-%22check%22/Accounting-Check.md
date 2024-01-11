@@ -1,3 +1,5 @@
+# D365FO Target service: `BESer_Services/SERInvoiceService/CheckAccounting`
+
 #_API Methods_
 
 ##`POST` **/checkAccounting**
