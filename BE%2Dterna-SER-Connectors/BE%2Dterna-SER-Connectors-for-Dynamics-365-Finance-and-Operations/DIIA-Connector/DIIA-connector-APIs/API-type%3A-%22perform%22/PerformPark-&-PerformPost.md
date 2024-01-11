@@ -1,6 +1,6 @@
 # D365FO Target services: `/api/services/BESer_Services/SERInvoiceService/PostInvoice`, `/api/services/BESer_Services/SERInvoiceService/PostInvoiceV2`, `/api/services/BESer_Services/SERInvoiceService/ParkInvoice`, `/api/services/BESer_Services/SERInvoiceService/ParkInvoiceV2`
 
-# D365FO Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/JournalNames`, `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'journal' or</span> `data/VendInvoiceJournalHeaderEntity` + `data/VendInvoiceJournalLineEntity` <span style="font-size:12pt">for posting method 'pendingInvoice'.</span>
+# D365FO Target data entities: `data/TaxGroupDatas`, `data/TaxItemGroups`, `data/JournalNames`, `data/VendInvoiceJournalHeaders` + `data/VendInvoiceJournalLines` <span style="font-size:12pt">for posting method 'journal' or</span> `data/VendInvoiceJournalHeaders` + `data/VendInvoiceJournalLines` <span style="font-size:12pt">for posting method 'pendingInvoice'.</span>
 
 #_API Methods_
 
