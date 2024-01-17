@@ -112,7 +112,7 @@ _A JSON/XML object with the following items:_
 | VendorTransferFrom | | | |
 | VendorVATNumber | | | |
 | PaymentMethod | MethodOfPayment | | |
-| ESRReferenceNumber | | | |
+| ESRReferenceNumber | Payment ID | | |
 | ApprovedBy | | | Mandatory when using PerformPost with postingMethod="journal"|
 
 (**) <b>Amount object structure</b>
