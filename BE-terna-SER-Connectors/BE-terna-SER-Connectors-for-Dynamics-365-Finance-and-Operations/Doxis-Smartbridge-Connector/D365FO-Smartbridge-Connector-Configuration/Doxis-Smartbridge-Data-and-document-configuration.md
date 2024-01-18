@@ -23,14 +23,17 @@ To set up Doxis Smartbridge Data and document configuration you must specify the
 8. Enter Doxis – F&O attributes mappings:
    * The mapping definition is based on a DotLiquid template definition.
    * Template:
-{
-	"<field_in_doxis>": "{{<Entity>.<Entity_Field>}}",
-	"<field_in_doxis>": "<any_value>"
-}
+```json
+	{
+		"<field_in_doxis>": "{{<Entity>.<Entity_Field>}}",
+		"<field_in_doxis>": "<any_value>"
+	}
+```
 
       In curly brackets, we will define which entity field corresponds to a certain data field in Doxis Smartbridge Service definition (Swagger). 
 
    * Example: mapping for sales order confirmation, where the Target Entity is SalesOrderConfirmationHeaderEntity
+```json
 {
 	"WSUniqueID": "{{SalesOrderConfirmationHeaderEntity.SalesOrderNumber}}",
 	"ObjectSubject": "{{SalesOrderConfirmationHeaderEntity.ConfirmationNumber}}",
@@ -41,6 +44,7 @@ To set up Doxis Smartbridge Data and document configuration you must specify the
 	"DocUniqueID": "{{SalesOrderConfirmationHeaderEntity.ConfirmationDocumentReference}}",
 	"TargetNodeCode": "CoreDocuments"
 }
+```
 
 The configuration also includes some validations for the DotLiquid definition:
 * When Json format is not correct, the following error is raised: _“Not correct format on attributes mappings.”_
