@@ -14,23 +14,24 @@ To set up Doxis Smartbridge Data and document configuration you must specify the
 
 
 
-**____________________________________________________________________________________________________________________________________________________________________________________________________**
-**NOTE**: it is mandatory to define one of the values above (either Smartbridge Workspace Url suffix or Smartbridge File Url suffix).
-**____________________________________________________________________________________________________________________________________________________________________________________________________**
+
+>**NOTE**: it is mandatory to define one of the values above (either Smartbridge Workspace Url suffix or Smartbridge File Url suffix).
 
 
 7. Enter **Filter**: define filter for querying data when triggering initial synchronization job. The filter configuration is used only when the synchronisation is run in the Initial (mass) synchronisation mode (see details in 5.2.1 Synchronisation/archiving modes).
 8. Enter Doxis – F&O attributes mappings:
    * The mapping definition is based on a DotLiquid template definition.
    * Template:
+<!-- {% raw %} -->
 ```json
 	{
 		"<field_in_doxis>": "{{<Entity>.<Entity_Field>}}",
 		"<field_in_doxis>": "<any_value>"
 	}
 ```
+<!-- {% endraw %} -->
 
-      In curly brackets, we will define which entity field corresponds to a certain data field in Doxis Smartbridge Service definition (Swagger). 
+In curly brackets, we will define which entity field corresponds to a certain data field in Doxis Smartbridge Service definition (Swagger). 
 
    * Example: mapping for sales order confirmation, where the Target Entity is SalesOrderConfirmationHeaderEntity
 ```json
