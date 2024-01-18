@@ -4,5 +4,5 @@ BE-terna SER Connectors integrate Microsoft Dynamics 365 applications with SER D
 - BE-terna Doxis Smartbridge connector for Microsoft Dynamics 365 Finance and operations ([Detail information](BE-terna-SER-Connectors/BE-terna-SER-Connectors-for-Dynamics-365-Finance-and-Operations))
 - BE-terna Doxis Smartbridge connector for Microsoft Dynamics 365 Sales ([Detail information](BE-terna-SER-Connectors/BE-terna-SER-Connector-for-Dynamics-365-Sales))
 
-
+* TOC
 {:toc}
